@@ -1,26 +1,30 @@
-__all__ = ['as_bool',
-           'as_int',
-           'as_str',
-           'as_list',
-           'as_enum',
-           'as_datetime',
-           'as_date',
-           'as_time',
-           'as_timedelta',
-           'date_to_timestamp']
+__all__ = [
+    "as_bool",
+    "as_int",
+    "as_str",
+    "as_list",
+    "as_enum",
+    "as_datetime",
+    "as_date",
+    "as_time",
+    "as_timedelta",
+    "date_to_timestamp",
+]
 
+import re
 from datetime import datetime, time, date, timedelta
 from numbers import Number
 from typing import Union, List, Type, AnyStr, Optional
 
 from ..errors import ParseError
+from ..constants import PY311_OR_ABOVE
 from ..lazy_imports import pytimeparse
 from ..type_def import E, N, NUMBERS
 
 
 # What values are considered "truthy" when converting to a boolean type.
 # noinspection SpellCheckingInspection
-_TRUTHY_VALUES = ('TRUE', 'T', 'YES', 'Y', '1')
+_TRUTHY_VALUES = ("TRUE", "T", "YES", "Y", "1")
 
 
 def as_bool(o: Union[str, bool, N]):
@@ -37,8 +41,9 @@ def as_bool(o: Union[str, bool, N]):
     return o.upper() in _TRUTHY_VALUES
 
 
-def as_int(o: Union[str, int, float, bool, None], base_type=int,
-           default=0, raise_=True):
+def as_int(
+    o: Union[str, int, float, bool, None], base_type=int, default=0, raise_=True
+):
     """
     Return `o` if already a int, otherwise return the int value for a
     string. If `o` is None or an empty string, return `default` instead.
@@ -56,20 +61,19 @@ def as_int(o: Union[str, int, float, bool, None], base_type=int,
         return o
 
     if t is bool:
-        raise TypeError(f'as_int: Incorrect type, object={o!r}, type={t}')
+        raise TypeError(f"as_int: Incorrect type, object={o!r}, type={t}")
 
     if t is float:
         return base_type(round(o))
 
     # Check if the string represents a float value, e.g. '2.7'
-    if t is str and '.' in o:
+    if t is str and "." in o:
         return base_type(round(float(o)))
 
     try:
         return base_type(o)
 
     except (TypeError, ValueError):
-
         if not o:
             return default
 
@@ -98,14 +102,13 @@ def as_str(o: Union[str, None], base_type=str, raise_=True):
         return base_type(o)
 
     except ValueError:
-
         if raise_:
             raise
 
         return base_type()
 
 
-def as_list(o: Union[str, List[str]], sep=','):
+def as_list(o: Union[str, List[str]], sep=","):
     """
     Return `o` if already a list. If `o` is None or an empty string,
     return an empty list. Otherwise, split the string on `sep` and
@@ -121,12 +124,13 @@ def as_list(o: Union[str, List[str]], sep=','):
     return o.split(sep)
 
 
-def as_enum(o: Union[AnyStr, N],
-            base_type: Type[E],
-            lookup_func=lambda base_type, o: base_type[o],
-            transform_func=lambda o: o.upper().replace(' ', '_'),
-            raise_=True
-            ) -> Optional[E]:
+def as_enum(
+    o: Union[AnyStr, N],
+    base_type: Type[E],
+    lookup_func=lambda base_type, o: base_type[o],
+    transform_func=lambda o: o.upper().replace(" ", "_"),
+    raise_=True,
+) -> Optional[E]:
     """
     Return `o` if it's already an :class:`Enum` of type `base_type`. If `o` is
     None or an empty string, return None.
@@ -151,7 +155,7 @@ def as_enum(o: Union[AnyStr, N],
     if o is None:
         return o
 
-    if o == '':
+    if o == "":
         return None
 
     key = transform_func(o) if isinstance(o, str) else o
@@ -160,31 +164,37 @@ def as_enum(o: Union[AnyStr, N],
         return lookup_func(base_type, key)
 
     except KeyError:
-
         if raise_:
             from inspect import getsource
 
-            enum_cls_name = getattr(base_type, '__qualname__', base_type)
-            valid_values = getattr(base_type, '_member_names_', None)
+            enum_cls_name = getattr(base_type, "__qualname__", base_type)
+            valid_values = getattr(base_type, "_member_names_", None)
             # TODO this is to get the source code for the lambda function.
             #   Might need to refactor into a helper func when time allows.
-            lookup_func_src = getsource(lookup_func).strip('\n, ').split(
-                'lookup_func=', 1)[-1]
+            lookup_func_src = (
+                getsource(lookup_func).strip("\n, ").split("lookup_func=", 1)[-1]
+            )
 
             e = ValueError(
-                f'as_enum: Unable to convert value to type {enum_cls_name!r}')
+                f"as_enum: Unable to convert value to type {enum_cls_name!r}"
+            )
 
-            raise ParseError(e, o, base_type,
-                             valid_values=valid_values,
-                             lookup_key=key,
-                             lookup_func=lookup_func_src)
+            raise ParseError(
+                e,
+                o,
+                base_type,
+                valid_values=valid_values,
+                lookup_key=key,
+                lookup_func=lookup_func_src,
+            )
 
         else:
             return None
 
 
-def as_datetime(o: Union[str, Number, datetime],
-                base_type=datetime, default=None, raise_=True):
+def as_datetime(
+    o: Union[str, Number, datetime], base_type=datetime, default=None, raise_=True
+):
     """
     Attempt to convert an object `o` to a :class:`datetime` object using the
     below logic.
@@ -205,10 +215,9 @@ def as_datetime(o: Union[str, Number, datetime],
     try:
         # We can assume that `o` is a string, as generally this will be the
         # case. Also, :func:`fromisoformat` does an instance check separately.
-        return base_type.fromisoformat(o.replace('Z', '+00:00', 1))
+        return base_type.fromisoformat(o.replace("Z", "+00:00", 1))
 
     except Exception:
-
         t = type(o)
 
         if t is str:
@@ -225,13 +234,12 @@ def as_datetime(o: Union[str, Number, datetime],
             return o
 
         if raise_:
-            raise TypeError(f'Unsupported type, value={o!r}, type={t}')
+            raise TypeError(f"Unsupported type, value={o!r}, type={t}")
 
         return default
 
 
-def as_date(o: Union[str, Number, date],
-            base_type=date, default=None, raise_=True):
+def as_date(o: Union[str, Number, date], base_type=date, default=None, raise_=True):
     """
     Attempt to convert an object `o` to a :class:`date` object using the
     below logic.
@@ -255,7 +263,6 @@ def as_date(o: Union[str, Number, date],
         return base_type.fromisoformat(o)
 
     except Exception:
-
         t = type(o)
 
         if t is str:
@@ -272,7 +279,7 @@ def as_date(o: Union[str, Number, date],
             return o
 
         if raise_:
-            raise TypeError(f'Unsupported type, value={o!r}, type={t}')
+            raise TypeError(f"Unsupported type, value={o!r}, type={t}")
 
         return default
 
@@ -296,10 +303,15 @@ def as_time(o: Union[str, time], base_type=time, default=None, raise_=True):
     try:
         # We can assume that `o` is a string, as generally this will be the
         # case. Also, :func:`fromisoformat` does an instance check separately.
-        return base_type.fromisoformat(o.replace('Z', '+00:00', 1))
+        if PY311_OR_ABOVE:
+            if o.find("Z") > -1 or re.search(r"(\d+[\+\-]\d{1,2}:)", o):
+                return base_type.fromisoformat(o)
+            else:
+                return base_type.fromisoformat(o + "Z").replace(tzinfo=None)
+        else:
+            return base_type.fromisoformat(o.replace("Z", "+00:00", 1))
 
     except Exception:
-
         t = type(o)
 
         if t is str:
@@ -311,13 +323,14 @@ def as_time(o: Union[str, time], base_type=time, default=None, raise_=True):
             return o
 
         if raise_:
-            raise TypeError(f'Unsupported type, value={o!r}, type={t}')
+            raise TypeError(f"Unsupported type, value={o!r}, type={t}")
 
         return default
 
 
-def as_timedelta(o: Union[str, N, timedelta],
-                 base_type=timedelta, default=None, raise_=True):
+def as_timedelta(
+    o: Union[str, N, timedelta], base_type=timedelta, default=None, raise_=True
+):
     """
     Attempt to convert an object `o` to a :class:`timedelta` object using the
     below logic.
@@ -342,7 +355,7 @@ def as_timedelta(o: Union[str, N, timedelta],
     if t is str:
         # Check if the string represents a numeric value like "1.23"
         # Ref: https://stackoverflow.com/a/23639915/10237506
-        if o.replace('.', '', 1).isdigit():
+        if o.replace(".", "", 1).isdigit():
             seconds = float(o)
         else:
             # Otherwise, parse strings using `pytimeparse`
@@ -356,7 +369,7 @@ def as_timedelta(o: Union[str, N, timedelta],
         return o
 
     elif raise_:
-        raise TypeError(f'Unsupported type, value={o!r}, type={t}')
+        raise TypeError(f"Unsupported type, value={o!r}, type={t}")
 
     else:
         return default
@@ -365,7 +378,7 @@ def as_timedelta(o: Union[str, N, timedelta],
         return timedelta(seconds=seconds)
 
     except TypeError:
-        raise ValueError(f'Invalid value for timedelta, value={o!r}')
+        raise ValueError(f"Invalid value for timedelta, value={o!r}")
 
 
 def date_to_timestamp(d: date) -> int:
