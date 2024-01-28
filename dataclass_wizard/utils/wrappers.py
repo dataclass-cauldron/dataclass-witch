@@ -1,6 +1,7 @@
 """
 Wrapper utilities
 """
+
 from typing import Callable
 
 

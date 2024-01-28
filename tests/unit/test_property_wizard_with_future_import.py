@@ -71,8 +71,7 @@ def test_property_wizard_with_unresolvable_forward_ref():
     class Car:
         spare_tires: int
 
-    class Truck:
-        ...
+    class Truck: ...
 
     v = Vehicle()
     log.debug(v)

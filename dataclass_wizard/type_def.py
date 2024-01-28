@@ -170,8 +170,7 @@ class Encoder(PyProtocol):
     `json.dumps`
     """
 
-    def __call__(self, obj: Union[JSONObject, JSONList], **kwargs) -> AnyStr:
-        ...
+    def __call__(self, obj: Union[JSONObject, JSONList], **kwargs) -> AnyStr: ...
 
 
 class FileEncoder(PyProtocol):
@@ -182,8 +181,7 @@ class FileEncoder(PyProtocol):
 
     def __call__(
         self, obj: Union[JSONObject, JSONList], file: Union[TextIO, BinaryIO], **kwargs
-    ) -> AnyStr:
-        ...
+    ) -> AnyStr: ...
 
 
 class Decoder(PyProtocol):
@@ -192,8 +190,7 @@ class Decoder(PyProtocol):
     `json.loads`
     """
 
-    def __call__(self, s: AnyStr, **kwargs) -> Union[JSONObject, ListOfJSONObject]:
-        ...
+    def __call__(self, s: AnyStr, **kwargs) -> Union[JSONObject, ListOfJSONObject]: ...
 
 
 class FileDecoder(PyProtocol):
@@ -204,5 +201,4 @@ class FileDecoder(PyProtocol):
 
     def __call__(
         self, file: Union[TextIO, BinaryIO], **kwargs
-    ) -> Union[JSONObject, ListOfJSONObject]:
-        ...
+    ) -> Union[JSONObject, ListOfJSONObject]: ...

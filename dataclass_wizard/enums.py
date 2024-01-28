@@ -2,6 +2,7 @@
 Re-usable Enum definitions
 
 """
+
 from enum import Enum
 
 from .utils.string_conv import *

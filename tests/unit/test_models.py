@@ -44,7 +44,9 @@ def test_container_methods(mocker: MockerFixture, mock_open):
     # which thus aligns with the output of `pprint.pformat`.
     assert str(c) == repr(c)
 
-    assert c.prettify() == """\
+    assert (
+        c.prettify()
+        == """\
 [
   {
     "f1": "hello",
@@ -55,6 +57,7 @@ def test_container_methods(mocker: MockerFixture, mock_open):
     "f2": 2
   }
 ]"""
+    )
 
     assert c.to_json() == '[{"f1": "hello", "f2": 1}, {"f1": "world", "f2": 2}]'
 

@@ -1,6 +1,7 @@
 """
 Common test fixtures and utilities.
 """
+
 from dataclasses import dataclass
 from uuid import UUID
 

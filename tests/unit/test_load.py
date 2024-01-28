@@ -3,6 +3,7 @@ Tests for the `loaders` module, but more importantly for the `parsers` module.
 
 Note: I might refactor this into a separate `test_parsers.py` as time permits.
 """
+
 import logging
 from abc import ABC
 from collections import namedtuple, defaultdict, deque
@@ -179,13 +180,11 @@ def test_invalid_types_with_debug_mode_enabled():
     assert (err.ann_type, err.obj_type) == (float, str)
 
     with pytest.raises(ParseError) as e:
-        _ = MyClass.from_dict(
-            {
-                "myInt": "1",
-                "myDict": {2: "2021-01-01"},
-                "myInner": {"my-float": "1.23", "myList": [{"key": "value"}]},
-            }
-        )
+        _ = MyClass.from_dict({
+            "myInt": "1",
+            "myDict": {2: "2021-01-01"},
+            "myInner": {"my-float": "1.23", "myList": [{"key": "value"}]},
+        })
 
     err = e.value
     assert type(err.base_error) == TypeError
@@ -241,8 +240,7 @@ def test_date_times_with_custom_pattern():
         cls.__eq__ = __eq__
         return cls
 
-    class MyDate(date, metaclass=create_strict_eq):
-        ...
+    class MyDate(date, metaclass=create_strict_eq): ...
 
     class MyTime(time, metaclass=create_strict_eq):
         def get_hour(self):
@@ -1591,13 +1589,11 @@ def test_load_with_inner_model_when_data_is_wrong_type():
 
     json_dict = {
         "myStr": "testing",
-        "inner": [
-            {
-                "myStr": "123",
-                "myBool": "false",
-                "my_val": "2",
-            }
-        ],
+        "inner": [{
+            "myStr": "123",
+            "myBool": "false",
+            "my_val": "2",
+        }],
     }
 
     with pytest.raises(ParseError) as exc_info:

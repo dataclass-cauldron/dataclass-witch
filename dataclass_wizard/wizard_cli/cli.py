@@ -1,6 +1,7 @@
 """
 Entry point for the Wizard CLI tool.
 """
+
 import argparse
 import os
 import platform

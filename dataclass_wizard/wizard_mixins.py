@@ -1,6 +1,7 @@
 """
 Helper Wizard Mixin classes.
 """
+
 __all__ = ["JSONListWizard", "JSONFileWizard", "YAMLWizard"]
 
 import json

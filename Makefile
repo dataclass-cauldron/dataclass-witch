@@ -51,7 +51,8 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr htmlcov/
 	rm -fr .pytest_cache
 
-lint: ## check style with flake8 and pylint
+lint: ## format using black and check style with flake8 and pylint
+	black --preview dataclass_wizard tests
 	flake8 dataclass_wizard tests
 	pylint dataclass_wizard tests
 

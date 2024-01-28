@@ -1,6 +1,7 @@
 """
 Contains implementations for Abstract Base Classes
 """
+
 import json
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, InitVar

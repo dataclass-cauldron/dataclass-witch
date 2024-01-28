@@ -8,6 +8,7 @@ obtained from http://www.apache.org/licenses/LICENSE-2.0.
 
 See the end of this file for the original Apache license from this library.
 """
+
 from collections import defaultdict, deque
 
 # noinspection PyProtectedMember
