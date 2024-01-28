@@ -62,9 +62,7 @@ test-all: ## run tests on every Python version with tox
 	tox
 
 coverage: ## check code coverage with unit tests quickly with the default Python
-	coverage run --source dataclass_wizard -m pytest tests/unit
-	coverage report -m
-	coverage html
+	pytest --cov=dataclass_wizard --cov-report html:htmlcov --cov-branch
 	$(BROWSER) htmlcov/index.html
 
 docs: ## generate Sphinx HTML documentation, including API docs
