@@ -50,7 +50,7 @@ wiz = "dataclass_wizard.wizard_cli.cli:main"
 collect_ignore = ['setup.py']
 
 [tool.bumpversion]
-current_version = "0.23.0"
+current_version = "0.24.0"
 commit = true
 message = "Bump version: {current_version} → {new_version}"
 search = "{current_version}"

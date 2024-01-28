@@ -9,7 +9,7 @@ __description__ = (
     "JSON input."
 )
 __url__ = "https://github.com/Frequency0/dataclass-wizard"
-__version__ = "0.23.0"
+__version__ = "0.24.0"
 __author__ = "Steven Hogue"
 __author_email__ = ""
 __license__ = "Apache 2.0"
