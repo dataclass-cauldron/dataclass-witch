@@ -80,9 +80,14 @@ release: dist ## package and upload a release
 	twine upload dist/*
 
 dist: clean ## builds source and wheel package
-	python setup.py sdist
-	python setup.py bdist_wheel
+	pip wheel -w dist .
 	ls -l dist
 
 install: clean ## install the package to the active Python's site-packages
 	python setup.py install
+
+bump-patch:
+	bump-my-version bump patch
+
+bump-minor:
+	bump-my-version bump minor

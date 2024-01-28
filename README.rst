@@ -17,12 +17,6 @@ Full documentation is available at `Read The Docs`_. (`Installation`_)
         :target: https://dataclass-wizard.readthedocs.io/en/latest/?version=latest
         :alt: Documentation Status
 
-.. image:: https://pyup.io/repos/github/rnag/dataclass-wizard/shield.svg
-     :target: https://pyup.io/repos/github/rnag/dataclass-wizard/
-     :alt: Updates
-
-
-
 This library provides a set of simple, yet elegant *wizarding* tools for
 interacting with the Python ``dataclasses`` module.
 

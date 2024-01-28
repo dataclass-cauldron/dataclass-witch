@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dataclass-wizard"
-version = "0.23.0"
+version = "0.24.0"
 license = { text = "Apache 2.0" }
 authors = [{ name = "Steven Hogue" }]
 keywords = [
@@ -60,3 +60,8 @@ replace = "{new_version}"
 filename = "dataclass_wizard/__version__.py"
 search = '__version__ = "{current_version}"'
 replace = '__version__ = "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = 'version = "{current_version}"'
+replace = 'version = "{new_version}"'
