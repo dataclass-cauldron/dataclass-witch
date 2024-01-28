@@ -8,32 +8,24 @@ Installation
 Stable release
 --------------
 
-To install Dataclass Wizard, run this command in your terminal:
+To install Dataclass Mage, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install dataclass-wizard
+    $ pip install dataclass-mage
 
-This is the preferred method to install Dataclass Wizard, as it will always install the most recent stable release.
+This is the preferred method to install Dataclass Mage, as it will always install the most recent stable release.
 
 If you don't have `pip`_ installed, this `Python installation guide`_ can guide
 you through the process.
 
-Dataclass Wizard is also available on `conda`_ under the `conda-forge`_ channel:
-
-.. code-block:: console
-
-    $ conda install dataclass-wizard -c conda-forge
-
 .. _pip: https://pip.pypa.io
 .. _Python installation guide: http://docs.python-guide.org/en/latest/starting/installation/
-.. _conda: https://www.anaconda.com/
-.. _conda-forge: https://conda-forge.org/
 
 From sources
 ------------
 
-The sources for Dataclass Wizard can be downloaded from the `Github repo`_.
+The sources for Dataclass Mage can be downloaded from the `Github repo`_.
 
 You can either clone the public repository:
 

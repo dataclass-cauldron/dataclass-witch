@@ -38,7 +38,7 @@ with IDEs in general.
     from dataclasses import dataclass, field
     from typing_extensions import Annotated
 
-    from dataclass_wizard import JSONSerializable, json_field, json_key
+    from dataclass_mage import JSONSerializable, json_field, json_key
 
 
     @dataclass
@@ -114,7 +114,7 @@ Using the :class:`Meta` approach
     from typing import Union
     from dataclasses import dataclass
 
-    from dataclass_wizard import JSONSerializable
+    from dataclass_mage import JSONSerializable
 
 
     @dataclass
@@ -143,7 +143,7 @@ Using a :func:`dataclasses.Field` subclass
     from typing import Union
     from dataclasses import dataclass
 
-    from dataclass_wizard import JSONSerializable, json_field
+    from dataclass_mage import JSONSerializable, json_field
 
 
     @dataclass
@@ -168,7 +168,7 @@ Using Annotated with a :func:`json_key` argument
     from typing import Union
     from typing_extensions import Annotated
 
-    from dataclass_wizard import JSONSerializable, json_key
+    from dataclass_mage import JSONSerializable, json_key
 
 
     @dataclass

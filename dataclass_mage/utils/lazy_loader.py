@@ -3,6 +3,7 @@ Utility for lazy loading Python modules.
 
 Credits: https://wil.yegelwel.com/lazily-importing-python-modules/
 """
+
 import importlib
 import logging
 import types

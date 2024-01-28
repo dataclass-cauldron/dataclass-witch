@@ -8,8 +8,8 @@ from typing import Optional
 
 import pytest
 
-from dataclass_wizard import JSONWizard, DumpMeta
-from dataclass_wizard.errors import ParseError
+from dataclass_mage import JSONWizard, DumpMeta
+from dataclass_mage.errors import ParseError
 from ..conftest import *
 
 log = logging.getLogger(__name__)

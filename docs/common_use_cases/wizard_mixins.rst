@@ -30,7 +30,7 @@ Simple example of usage below:
 
     from dataclasses import dataclass
 
-    from dataclass_wizard import JSONListWizard, Container
+    from dataclass_mage import JSONListWizard, Container
 
 
     @dataclass
@@ -90,7 +90,7 @@ It comes with only two added methods: :meth:`from_json_file` and
 
     from dataclasses import dataclass
 
-    from dataclass_wizard import JSONFileWizard
+    from dataclass_mage import JSONFileWizard
 
 
     @dataclass
@@ -117,7 +117,7 @@ It comes with only two added methods: :meth:`from_json_file` and
 ~~~~~~~~~~~~~~~~~~~
 
 The YAML Wizard leverages the `PyYAML`_ library -- which can be installed
-as an extra via ``pip install dataclass-wizard[yaml]`` -- to easily convert
+as an extra via ``pip install dataclass-mage[yaml]`` -- to easily convert
 dataclass instances to/from YAML.
 
 .. note::
@@ -137,7 +137,7 @@ A (mostly) complete example of using the :class:`YAMLWizard` is as follows:
 
     from dataclasses import dataclass, field
 
-    from dataclass_wizard import YAMLWizard
+    from dataclass_mage import YAMLWizard
 
 
     @dataclass

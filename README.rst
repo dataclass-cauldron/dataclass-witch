@@ -1,5 +1,5 @@
 ================
-Dataclass Wizard
+Dataclass Mage
 ================
 
 Full documentation is available at `Read The Docs`_. (`Installation`_)
@@ -7,25 +7,15 @@ Full documentation is available at `Read The Docs`_. (`Installation`_)
 .. image:: https://img.shields.io/pypi/v/dataclass-wizard.svg
         :target: https://pypi.org/project/dataclass-wizard
 
-.. image:: https://img.shields.io/conda/vn/conda-forge/dataclass-wizard.svg
-        :target: https://anaconda.org/conda-forge/dataclass-wizard
-
 .. image:: https://img.shields.io/pypi/pyversions/dataclass-wizard.svg
         :target: https://pypi.org/project/dataclass-wizard
 
-.. image:: https://github.com/rnag/dataclass-wizard/actions/workflows/dev.yml/badge.svg
-        :target: https://github.com/rnag/dataclass-wizard/actions/workflows/dev.yml
+.. image:: https://github.com/Frequency0/dataclass-wizard/actions/workflows/dev.yml/badge.svg
+        :target: https://github.com/Frequency0/dataclass-wizard/actions/workflows/dev.yml
 
 .. image:: https://readthedocs.org/projects/dataclass-wizard/badge/?version=latest
         :target: https://dataclass-wizard.readthedocs.io/en/latest/?version=latest
         :alt: Documentation Status
-
-
-.. image:: https://pyup.io/repos/github/rnag/dataclass-wizard/shield.svg
-     :target: https://pyup.io/repos/github/rnag/dataclass-wizard/
-     :alt: Updates
-
-
 
 This library provides a set of simple, yet elegant *wizarding* tools for
 interacting with the Python ``dataclasses`` module.
@@ -35,11 +25,11 @@ interacting with the Python ``dataclasses`` module.
 
 -------------------
 
-**Behold, the power of the Dataclass Wizard**::
+**Behold, the power of the Dataclass Mage**::
 
     >>> from __future__ import annotations
     >>> from dataclasses import dataclass, field
-    >>> from dataclass_wizard import JSONWizard
+    >>> from dataclass_mage import JSONWizard
     ...
     >>> @dataclass
     ... class MyClass(JSONWizard):
@@ -74,22 +64,13 @@ interacting with the Python ``dataclasses`` module.
 Installation
 ------------
 
-The Dataclass Wizard library is available `on PyPI`_, and can be installed with ``pip``:
+The Dataclass Mage library is available `on PyPI`_, and can be installed with ``pip``:
 
 .. code-block:: shell
 
-    $ pip install dataclass-wizard
-
-Alternatively, this library is available `on conda`_ under the `conda-forge`_ channel:
-
-.. code-block:: shell
-
-    $ conda install dataclass-wizard -c conda-forge
+    $ pip install dataclass-mage
 
 The ``dataclass-wizard`` library officially supports **Python 3.9** or higher.
-
-.. _on conda: https://anaconda.org/conda-forge/dataclass-wizard
-.. _conda-forge: https://conda-forge.org/
 
 Features
 --------
@@ -117,7 +98,7 @@ In addition to the ``JSONWizard``, here are a few extra Mixin_ classes that migh
 Supported Types
 ---------------
 
-The Dataclass Wizard library provides inherent support for standard Python collections
+The Dataclass Mage library provides inherent support for standard Python collections
 such as ``list``, ``dict`` and ``set``, as well as most Generics from the typing
 module, such as ``Union`` and ``Any``. Other commonly used types such as ``Enum``,
 ``defaultdict``, and date and time objects such as ``datetime`` are also natively
@@ -144,7 +125,7 @@ Using the built-in JSON marshalling support for dataclasses:
     from datetime import date
     from enum import Enum
 
-    from dataclass_wizard import JSONWizard
+    from dataclass_mage import JSONWizard
 
 
     @dataclass
@@ -223,7 +204,7 @@ Using the built-in JSON marshalling support for dataclasses:
     from dataclasses import dataclass, field
     from typing_extensions import Annotated
 
-    from dataclass_wizard import property_wizard
+    from dataclass_mage import property_wizard
 
 
     @dataclass
@@ -279,7 +260,7 @@ Using the built-in JSON marshalling support for dataclasses:
     from datetime import date
     from typing import List, Union
 
-    from dataclass_wizard import JSONWizard
+    from dataclass_mage import JSONWizard
 
 
     @dataclass
@@ -397,7 +378,7 @@ Here is an example to demonstrate the usage of these helper functions:
     from dataclasses import dataclass, field
     from datetime import datetime, date
 
-    from dataclass_wizard import fromdict, asdict, DumpMeta
+    from dataclass_mage import fromdict, asdict, DumpMeta
 
 
     @dataclass
@@ -457,7 +438,7 @@ Example below:
 
     from dataclasses import dataclass
 
-    from dataclass_wizard import JSONSerializable, json_field
+    from dataclass_mage import JSONSerializable, json_field
 
 
     @dataclass
@@ -497,8 +478,8 @@ along the way.
     from dataclasses import dataclass
     from datetime import date
 
-    from dataclass_wizard import JSONWizard
-    from dataclass_wizard.enums import DateTimeTo
+    from dataclass_mage import JSONWizard
+    from dataclass_mage.enums import DateTimeTo
 
 
     @dataclass
@@ -565,8 +546,8 @@ an unknown JSON key is encountered in the  *load* (de-serialization) process.
     import logging
     from dataclasses import dataclass
 
-    from dataclass_wizard import JSONWizard
-    from dataclass_wizard.errors import UnknownJSONKey
+    from dataclass_mage import JSONWizard
+    from dataclass_mage.errors import UnknownJSONKey
 
 
     # Sets up application logging if we haven't already done so
@@ -637,7 +618,7 @@ A brief example of the intended usage is shown below:
     # Note: in Python 3.9+, you can import this from `typing` instead
     from typing_extensions import Annotated
 
-    from dataclass_wizard import fromdict, asdict, DatePattern, TimePattern, Pattern
+    from dataclass_mage import fromdict, asdict, DatePattern, TimePattern, Pattern
 
 
     @dataclass
@@ -696,7 +677,7 @@ dataclasses in ``Union`` types. For more info, check out the
 
     from dataclasses import dataclass
 
-    from dataclass_wizard import JSONWizard
+    from dataclass_mage import JSONWizard
 
 
     @dataclass
@@ -780,7 +761,7 @@ result. An example of both these approaches is shown below.
     from dataclasses import field, dataclass
     from typing import DefaultDict, List
 
-    from dataclass_wizard import JSONWizard
+    from dataclass_mage import JSONWizard
 
 
     @dataclass
@@ -831,7 +812,7 @@ Additionally, here is an example to demonstrate usage of both these approaches:
     from dataclasses import dataclass
     from typing import Annotated
 
-    from dataclass_wizard import JSONWizard, json_key, json_field
+    from dataclass_mage import JSONWizard, json_key, json_field
 
 
     @dataclass
@@ -906,11 +887,11 @@ This package was created with Cookiecutter_ and the `rnag/cookiecutter-pypackage
 .. _Cookiecutter: https://github.com/cookiecutter/cookiecutter
 .. _`rnag/cookiecutter-pypackage`: https://github.com/rnag/cookiecutter-pypackage
 .. _`Contributing`: https://dataclass-wizard.readthedocs.io/en/latest/contributing.html
-.. _`open an issue`: https://github.com/rnag/dataclass-wizard/issues
+.. _`open an issue`: https://github.com/Frequency0/dataclass-wizard/issues
 .. _`JSONListWizard`: https://dataclass-wizard.readthedocs.io/en/latest/common_use_cases/wizard_mixins.html#jsonlistwizard
 .. _`JSONFileWizard`: https://dataclass-wizard.readthedocs.io/en/latest/common_use_cases/wizard_mixins.html#jsonfilewizard
 .. _`YAMLWizard`: https://dataclass-wizard.readthedocs.io/en/latest/common_use_cases/wizard_mixins.html#yamlwizard
-.. _`Container`: https://dataclass-wizard.readthedocs.io/en/latest/dataclass_wizard.html#dataclass_wizard.Container
+.. _`Container`: https://dataclass-wizard.readthedocs.io/en/latest/dataclass_mage.html#dataclass_mage.Container
 .. _`Supported Types`: https://dataclass-wizard.readthedocs.io/en/latest/overview.html#supported-types
 .. _`Mixin`: https://stackoverflow.com/a/547714/10237506
 .. _`Meta`: https://dataclass-wizard.readthedocs.io/en/latest/common_use_cases/meta.html
@@ -925,4 +906,4 @@ This package was created with Cookiecutter_ and the `rnag/cookiecutter-pypackage
 .. _`Patterned Date and Time`: https://dataclass-wizard.readthedocs.io/en/latest/common_use_cases/patterned_date_time.html
 .. _Union: https://docs.python.org/3/library/typing.html#typing.Union
 .. _`Dataclasses in Union Types`: https://dataclass-wizard.readthedocs.io/en/latest/common_use_cases/dataclasses_in_union_types.html
-.. _as milestones: https://github.com/rnag/dataclass-wizard/milestones
+.. _as milestones: https://github.com/Frequency0/dataclass-wizard/milestones

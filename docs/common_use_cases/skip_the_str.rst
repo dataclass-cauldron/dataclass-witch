@@ -15,7 +15,7 @@ you can pass ``str=False`` as shown below:
 
     from dataclasses import dataclass
 
-    from dataclass_wizard import JSONSerializable
+    from dataclass_mage import JSONSerializable
 
 
     @dataclass

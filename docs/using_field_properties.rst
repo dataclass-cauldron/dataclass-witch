@@ -141,7 +141,7 @@ the ``property_wizard`` metaclass:
     from dataclasses import dataclass, field
     from typing import Union
 
-    from dataclass_wizard import property_wizard
+    from dataclass_mage import property_wizard
 
 
     @dataclass
@@ -198,7 +198,7 @@ module, just so that the code works for Python 3.6+ without issue.
     from typing import Union
     from typing_extensions import Annotated
 
-    from dataclass_wizard import property_wizard
+    from dataclass_mage import property_wizard
 
 
     @dataclass
@@ -297,7 +297,7 @@ types are now set with initial values as expected:
     from typing import Union, List, Set, DefaultDict
     from typing_extensions import Annotated
 
-    from dataclass_wizard import property_wizard
+    from dataclass_mage import property_wizard
 
 
     @dataclass

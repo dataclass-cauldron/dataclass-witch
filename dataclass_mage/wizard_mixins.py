@@ -1,6 +1,7 @@
 """
 Helper Wizard Mixin classes.
 """
+
 __all__ = ["JSONListWizard", "JSONFileWizard", "YAMLWizard"]
 
 import json
@@ -88,7 +89,7 @@ class JSONFileWizard:
         file: str,
         mode: str = "w",
         encoder: FileEncoder = json.dump,
-        **encoder_kwargs
+        **encoder_kwargs,
     ) -> None:
         """
         Serializes the instance and writes it to a JSON file.
@@ -129,7 +130,7 @@ class YAMLWizard:
         string_or_stream: Union[AnyStr, TextIO, BinaryIO],
         *,
         decoder: Optional[Decoder] = None,
-        **decoder_kwargs
+        **decoder_kwargs,
     ) -> Union[T, List[T]]:
         """
         Converts a YAML `string` to an instance of the dataclass, or a list of
@@ -148,7 +149,7 @@ class YAMLWizard:
         file: str,
         *,
         decoder: Optional[FileDecoder] = None,
-        **decoder_kwargs
+        **decoder_kwargs,
     ) -> Union[T, List[T]]:
         """
         Reads in the YAML file contents and converts to an instance of the
@@ -173,7 +174,7 @@ class YAMLWizard:
         file: str,
         mode: str = "w",
         encoder: Optional[FileEncoder] = None,
-        **encoder_kwargs
+        **encoder_kwargs,
     ) -> None:
         """
         Serializes the instance and writes it to a YAML file.
@@ -186,7 +187,7 @@ class YAMLWizard:
         cls: Type[T],
         instances: List[T],
         encoder: Optional[Encoder] = None,
-        **encoder_kwargs
+        **encoder_kwargs,
     ) -> AnyStr:
         """
         Converts a ``list`` of dataclass instances to a YAML `string`

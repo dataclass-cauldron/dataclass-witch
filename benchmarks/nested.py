@@ -10,10 +10,10 @@ import pytest
 from dataclasses_json import DataClassJsonMixin, config
 from jsons import JsonSerializable
 
-from dataclass_wizard import JSONWizard
-from dataclass_wizard.class_helper import create_new_class
-from dataclass_wizard.utils.string_conv import to_snake_case
-from dataclass_wizard.utils.type_conv import as_datetime, as_date
+from dataclass_mage import JSONWizard
+from dataclass_mage.class_helper import create_new_class
+from dataclass_mage.utils.string_conv import to_snake_case
+from dataclass_mage.utils.type_conv import as_datetime, as_date
 
 
 log = logging.getLogger(__name__)
@@ -139,7 +139,7 @@ class Data2JD:
     owner: str
 
 
-# Model for `dataclass-wizard`
+# Model for `dataclass-mage`
 WizType = TypeVar("WizType", Data1, JSONWizard)
 # Model for `jsons`
 JsonsType = TypeVar("JsonsType", Data1, JsonSerializable)
@@ -191,7 +191,7 @@ def test_load(data, n):
 
     # Result: 0.811
     log.info(
-        "dataclass-wizard     %f",
+        "dataclass-mage     %f",
         timeit("MyClassWizard.from_dict(data)", globals=g, number=n),
     )
 
@@ -242,7 +242,7 @@ def test_dump(data, n):
     g.update(locals())
 
     # Result: 1.096
-    log.info("dataclass-wizard     %f", timeit("c1.to_dict()", globals=g, number=n))
+    log.info("dataclass-mage     %f", timeit("c1.to_dict()", globals=g, number=n))
 
     # Result: 1.754
     log.info("asdict (dataclasses) %f", timeit("asdict(c1)", globals=g, number=n))

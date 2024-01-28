@@ -5,7 +5,7 @@ from unittest.mock import ANY
 import pytest
 from pytest_mock import MockerFixture
 
-from dataclass_wizard.wizard_cli import main, PyCodeGenerator
+from dataclass_mage.wizard_cli import main, PyCodeGenerator
 from ..conftest import data_file_path
 
 
@@ -47,7 +47,7 @@ def _get_captured_py_code(capfd) -> str:
 
 @pytest.fixture
 def mock_path(mocker: MockerFixture):
-    return mocker.patch("dataclass_wizard.wizard_cli.schema.Path")
+    return mocker.patch("dataclass_mage.wizard_cli.schema.Path")
 
 
 @pytest.fixture
@@ -57,7 +57,7 @@ def mock_stdin(mocker: MockerFixture):
 
 @pytest.fixture
 def mock_open(mocker: MockerFixture):
-    return mocker.patch("dataclass_wizard.wizard_cli.cli.open")
+    return mocker.patch("dataclass_mage.wizard_cli.cli.open")
 
 
 def test_call_py_code_generator_with_file_name(mock_path):
@@ -71,7 +71,7 @@ def test_call_py_code_generator_with_file_name(mock_path):
     from dataclasses import dataclass
     from typing import Any
 
-    from dataclass_wizard import JSONWizard
+    from dataclass_mage import JSONWizard
 
 
     @dataclass
@@ -109,7 +109,7 @@ def test_call_py_code_generator_with_experimental_features():
     from dataclasses import dataclass
     from typing import Any
 
-    from dataclass_wizard import JSONWizard
+    from dataclass_mage import JSONWizard
 
 
     @dataclass
@@ -269,7 +269,7 @@ def test_star_wars(capfd):
     from datetime import datetime
     from typing import List, Union
 
-    from dataclass_wizard import JSONWizard
+    from dataclass_mage import JSONWizard
 
 
     @dataclass
@@ -303,7 +303,7 @@ def test_input_1(capfd):
     expected = '''
     from dataclasses import dataclass
 
-    from dataclass_wizard import JSONWizard
+    from dataclass_mage import JSONWizard
 
 
     @dataclass
@@ -338,7 +338,7 @@ def test_input_2(capfd):
     from datetime import datetime
     from typing import Optional, Union
 
-    from dataclass_wizard import JSONWizard
+    from dataclass_mage import JSONWizard
 
 
     @dataclass
@@ -385,7 +385,7 @@ def test_input_3(capfd):
     from dataclasses import dataclass
     from typing import List, Union
 
-    from dataclass_wizard import JSONWizard
+    from dataclass_mage import JSONWizard
 
 
     @dataclass
@@ -431,7 +431,7 @@ def test_input_4(capfd):
     from dataclasses import dataclass
     from typing import Union
 
-    from dataclass_wizard import JSONWizard
+    from dataclass_mage import JSONWizard
 
 
     @dataclass
@@ -523,7 +523,7 @@ def test_input_5(capfd):
     from dataclasses import dataclass
     from typing import List, Union
 
-    from dataclass_wizard import JSONWizard
+    from dataclass_mage import JSONWizard
 
 
     @dataclass
@@ -586,7 +586,7 @@ def test_input_6(capfd):
     from datetime import date, time
     from typing import List, Union
 
-    from dataclass_wizard import JSONWizard
+    from dataclass_mage import JSONWizard
 
 
     @dataclass
@@ -629,7 +629,7 @@ def test_input_7(capfd):
     from dataclasses import dataclass
     from typing import List, Union
 
-    from dataclass_wizard import JSONWizard
+    from dataclass_mage import JSONWizard
 
 
     @dataclass
@@ -734,7 +734,7 @@ def test_input_8(capfd):
     from dataclasses import dataclass
     from typing import List, Optional, Union
 
-    from dataclass_wizard import JSONWizard
+    from dataclass_mage import JSONWizard
 
 
     @dataclass

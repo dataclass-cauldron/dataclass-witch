@@ -1,11 +1,10 @@
 pip>=21.3.1
-bump2version==1.0.1
+bump-my-version==0.17.2
 wheel==0.37.1
 watchdog[watchmedo]==2.1.6
-flake8>=3  # pyup: ignore
+ruff==0.1.14
 tox==3.24.5
-coverage>=6.2
-Sphinx==4.4.0
+sphinx==7.2.6
 twine==3.8.0
 # Extras
 pytimeparse==1.1.8
@@ -17,4 +16,4 @@ pytest-cov==3.0.0
 # Benchmark tests
 dataclasses-json==0.5.6
 jsons==1.6.1
-dataclass-factory==2.12  # pyup: ignore
+dataclass-factory==2.12

@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dataclass-mage"
+version = "0.24.1"
+license = { text = "Apache 2.0" }
+authors = [{ name = "Steven Hogue" }]
+keywords = [
+    "dataclasses",
+    "dataclass",
+    "wizard",
+    "json",
+    "marshal",
+    "json to dataclass",
+    "json2dataclass",
+    "dict to dataclass",
+    "property",
+    "field-property",
+    "serialization",
+    "deserialization"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python"
+]
+description = "Marshal dataclasses to/from JSON. Use field properties with initial values. Construct a dataclass schema with JSON input."
+readme = { file = "README.rst", content-type = "text/x-rst" }
+
+[project.urls]
+Documentation = "https://dataclass-wizard.readthedocs.io"
+Source = "https://github.com/Frequency0/dataclass-wizard"
+
+[project.optional-dependencies]
+timedelta = ["pytimeparse>=1.1.7"]
+yaml = ["PyYAML>=5.3"]
+
+[project.scripts]
+wiz = "dataclass_mage.wizard_cli.cli:main"
+
+[tool.bumpversion]
+current_version = "0.24.1"
+commit = true
+message = "Bump version: {current_version} → {new_version}"
+search = "{current_version}"
+replace = "{new_version}"
+
+[[tool.bumpversion.files]]
+filename = "dataclass_mage/__version__.py"
+search = '__version__ = "{current_version}"'
+replace = '__version__ = "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = 'version = "{current_version}"'
+replace = 'version = "{new_version}"'

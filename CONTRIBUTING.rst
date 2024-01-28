@@ -15,7 +15,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/rnag/dataclass-wizard/issues.
+Report bugs at https://github.com/Frequency0/dataclass-wizard/issues.
 
 If you are reporting a bug, please include:
 
@@ -38,14 +38,14 @@ and "help wanted" is open to whoever wants to implement it.
 Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
-Dataclass Wizard could always use more documentation, whether as part of the
-official Dataclass Wizard docs, in docstrings, or even on the web in blog posts,
+Dataclass Mage could always use more documentation, whether as part of the
+official Dataclass Mage docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/rnag/dataclass-wizard/issues.
+The best way to send feedback is to file an issue at https://github.com/Frequency0/dataclass-wizard/issues.
 
 If you are proposing a feature:
 
@@ -64,7 +64,7 @@ Ready to contribute? Here's how to set up `dataclass-wizard` for local developme
 
     $ git clone git@github.com:your_name_here/dataclass-wizard.git
 
-3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
+3. Install your local copy into a virtualenv. This is how you set up your fork for local development::
 
     $ mkvirtualenv dataclass-wizard
     $ cd dataclass-wizard/
@@ -76,14 +76,14 @@ Ready to contribute? Here's how to set up `dataclass-wizard` for local developme
 
    Now you can make your changes locally.
 
-5. When you're done making changes, check that your changes pass flake8 and the
-   tests, including testing other Python versions with tox::
+5. When you're done making changes, check that your changes pass ruff
+   and tests, including testing other Python versions with tox::
 
     $ make lint
     $ make test
     $ tox
 
-   To get flake8 and tox, just pip install them into your virtualenv.
+   To get ruff and tox, just pip install them into your virtualenv.
 
 6. Commit your changes and push your branch to GitHub::
 
@@ -103,7 +103,7 @@ Before you submit a pull request, check that it meets these guidelines:
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
 3. The pull request should work for Python 3.9 and 3.10, and for PyPy. Check
-   https://github.com/rnag/dataclass-wizard/actions/workflows/dev.yml
+   https://github.com/Frequency0/dataclass-wizard/actions/workflows/dev.yml
    and make sure that the tests pass for all supported Python versions.
 
 Tips
@@ -111,7 +111,7 @@ Tips
 
 To run a subset of tests::
 
-$ pytest tests/unit/test_dataclass_wizard.py::test_my_func
+$ pytest tests/unit/test_dataclass_mage.py::test_my_func
 
 
 Deploying
@@ -133,10 +133,10 @@ A reminder for the maintainers on how to deploy.
 Make sure all your changes are committed (including an entry in HISTORY.rst).
 Then run::
 
-$ bump2version patch # possible: major / minor / patch
-$ git push && git push --tags
+$ bump-my-version bump # possible: major / minor / patch
+$ git push
 
 GitHub Actions will then `deploy to PyPI`_ if tests pass.
 
-.. _`deploy to PyPI`: https://github.com/rnag/dataclass-wizard/actions/workflows/release.yml
+.. _`deploy to PyPI`: https://github.com/Frequency0/dataclass-wizard/actions/workflows/release.yml
 .. _`this post`: https://stackoverflow.com/questions/3745135/push-git-commits-tags-simultaneously

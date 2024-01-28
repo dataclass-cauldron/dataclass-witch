@@ -1,6 +1,7 @@
 """
 Contains implementations for Abstract Base Classes
 """
+
 import json
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, InitVar
@@ -102,7 +103,7 @@ class AbstractJSONWizard(ABC):
         instances: List[W],
         encoder: Encoder = json.dumps,
         indent=None,
-        **encoder_kwargs
+        **encoder_kwargs,
     ) -> AnyStr:
         """
         Converts a ``list`` of dataclass instances to a JSON `string`
@@ -402,7 +403,7 @@ class AbstractDumper(ABC):
         and implement this method. A simple example is shown below:
 
         >>> from dataclasses import dataclass
-        >>> from dataclass_wizard import JSONSerializable, DumpMixin
+        >>> from dataclass_mage import JSONSerializable, DumpMixin
         >>>
         >>>
         >>> @dataclass

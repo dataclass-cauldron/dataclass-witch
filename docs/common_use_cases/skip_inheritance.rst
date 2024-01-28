@@ -27,7 +27,7 @@ Here is an example to demonstrate the usage of these helper functions:
     from datetime import datetime
     from typing import List, Optional, Union
 
-    from dataclass_wizard import fromdict, asdict, DumpMeta
+    from dataclass_mage import fromdict, asdict, DumpMeta
 
 
     @dataclass

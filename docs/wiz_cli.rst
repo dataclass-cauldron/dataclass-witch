@@ -3,7 +3,7 @@
 The CLI Tool
 ============
 
-The ``wiz`` command provides a companion CLI tool for the Dataclass Wizard,
+The ``wiz`` command provides a companion CLI tool for the Dataclass Mage,
 which further simplifies interaction with the Python ``dataclasses`` module.
 
 Getting help::
@@ -11,7 +11,7 @@ Getting help::
     $ wiz -h
     usage: wiz [-h] [-V] {gen-schema,gs} ...
 
-    A companion CLI tool for the Dataclass Wizard, which simplifies interaction with the Python `dataclasses` module.
+    A companion CLI tool for the Dataclass Mage, which simplifies interaction with the Python `dataclasses` module.
 
     positional arguments:
       {gen-schema,gs}  Supported sub-commands
@@ -165,7 +165,7 @@ and ``Optional`` types.
     from dataclasses import dataclass
     from typing import Any
 
-    from dataclass_wizard import JSONWizard
+    from dataclass_mage import JSONWizard
 
 
     @dataclass

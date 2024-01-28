@@ -1,4 +1,4 @@
-* Dataclass Wizard version:
+* Dataclass Mage version:
 * Python version:
 * Operating System:
 

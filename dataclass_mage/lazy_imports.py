@@ -2,7 +2,7 @@
 Lazy Import definitions. Generally, these imports will be available when any
 "bonus features" are installed, i.e. as below:
 
-  $ pip install dataclass-wizard[timedelta]
+  $ pip install [timedelta]
 """
 
 from .utils.lazy_loader import LazyLoader

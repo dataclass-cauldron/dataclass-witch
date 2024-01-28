@@ -8,9 +8,9 @@ import pytest
 from dataclasses_json import DataClassJsonMixin
 from jsons import JsonSerializable
 
-from dataclass_wizard import JSONWizard
-from dataclass_wizard.class_helper import create_new_class
-from dataclass_wizard.utils.string_conv import to_snake_case
+from dataclass_mage import JSONWizard
+from dataclass_mage.class_helper import create_new_class
+from dataclass_mage.utils.string_conv import to_snake_case
 
 log = logging.getLogger(__name__)
 
@@ -22,7 +22,7 @@ class MyClass:
     my_bool: Optional[bool]
 
 
-# Model for `dataclass-wizard`
+# Model for ``
 WizType = TypeVar("WizType", MyClass, JSONWizard)
 # Model for `jsons`
 JsonsType = TypeVar("JsonsType", MyClass, JsonSerializable)
@@ -49,7 +49,7 @@ def test_load(data, n):
 
     # Result: 0.170
     log.info(
-        "dataclass-wizard     %f",
+        "     %f",
         timeit("MyClassWizard.from_dict(data)", globals=g, number=n),
     )
 
@@ -97,7 +97,7 @@ def test_dump(data, n):
     g.update(locals())
 
     # Result: 0.237
-    log.info("dataclass-wizard     %f", timeit("c1.to_dict()", globals=g, number=n))
+    log.info("     %f", timeit("c1.to_dict()", globals=g, number=n))
 
     # Result: 0.238
     log.info("asdict (dataclasses) %f", timeit("c1.to_dict()", globals=g, number=n))

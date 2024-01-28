@@ -47,7 +47,7 @@ The usage is shown below, and is again pretty straightforward.
 
     from typing_extensions import Annotated
 
-    from dataclass_wizard import JSONWizard, Pattern, DatePattern, TimePattern
+    from dataclass_mage import JSONWizard, Pattern, DatePattern, TimePattern
 
 
     @dataclass
@@ -108,7 +108,7 @@ of date-time, for example a subclass of :class:`date` if so desired.
 
     from typing_extensions import Annotated
 
-    from dataclass_wizard import JSONWizard, Pattern
+    from dataclass_mage import JSONWizard, Pattern
 
 
     class MyTime(time):
