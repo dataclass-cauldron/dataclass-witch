@@ -25,22 +25,22 @@ from typing import (
 
 import pytest
 
-from dataclass_wizard import *
-from dataclass_wizard.constants import TAG
-from dataclass_wizard.errors import (
+from dataclass_mage import *
+from dataclass_mage.constants import TAG
+from dataclass_mage.errors import (
     ParseError,
     MissingFields,
     UnknownJSONKey,
     MissingData,
 )
-from dataclass_wizard.models import Extras, _PatternBase
-from dataclass_wizard.parsers import (
+from dataclass_mage.models import Extras, _PatternBase
+from dataclass_mage.parsers import (
     OptionalParser,
     Parser,
     IdentityParser,
     SingleArgParser,
 )
-from dataclass_wizard.type_def import NoneType, T
+from dataclass_mage.type_def import NoneType, T
 from .conftest import MyUUIDSubclass
 from ..conftest import *
 

@@ -22,7 +22,7 @@ parser: argparse.ArgumentParser
 
 def main(args=None):
     """
-    A companion CLI tool for the Dataclass Wizard, which simplifies
+    A companion CLI tool for the Dataclass Mage, which simplifies
     interaction with the Python `dataclasses` module.
     """
 

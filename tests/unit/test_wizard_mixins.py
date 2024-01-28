@@ -4,8 +4,8 @@ from typing import List, Optional, Dict
 import pytest
 from pytest_mock import MockerFixture
 
-from dataclass_wizard import Container
-from dataclass_wizard.wizard_mixins import JSONListWizard, JSONFileWizard, YAMLWizard
+from dataclass_mage import Container
+from dataclass_mage.wizard_mixins import JSONListWizard, JSONFileWizard, YAMLWizard
 from .conftest import SampleClass
 
 
@@ -31,7 +31,7 @@ class Inner:
 
 @pytest.fixture
 def mock_open(mocker: MockerFixture):
-    return mocker.patch("dataclass_wizard.wizard_mixins.open")
+    return mocker.patch("dataclass_mage.wizard_mixins.open")
 
 
 def test_json_list_wizard_methods():
@@ -83,7 +83,7 @@ def test_yaml_wizard_methods(mocker: MockerFixture):
 
     # Patch open() to return a file-like object which returns our string data.
     m = mocker.patch(
-        "dataclass_wizard.wizard_mixins.open", mocker.mock_open(read_data=yaml_data)
+        "dataclass_mage.wizard_mixins.open", mocker.mock_open(read_data=yaml_data)
     )
 
     filename = "my_file.yaml"

@@ -50,7 +50,7 @@ dataclasses in ``Union`` types.
 
     from dataclasses import dataclass
 
-    from dataclass_wizard import JSONWizard
+    from dataclass_mage import JSONWizard
 
 
     @dataclass
@@ -169,7 +169,7 @@ using a class inheritance model with the :class:`JSONWizard` mixin class:
     from dataclasses import dataclass
     from typing import Union
 
-    from dataclass_wizard import JSONWizard
+    from dataclass_mage import JSONWizard
 
 
     @dataclass
@@ -268,7 +268,7 @@ using any special class inheritance model:
     from dataclasses import dataclass
     from typing import Union
 
-    from dataclass_wizard import asdict, fromdict, LoadMeta
+    from dataclass_mage import asdict, fromdict, LoadMeta
 
 
     @dataclass

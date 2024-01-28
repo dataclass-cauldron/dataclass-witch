@@ -38,8 +38,8 @@ and "help wanted" is open to whoever wants to implement it.
 Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
-Dataclass Wizard could always use more documentation, whether as part of the
-official Dataclass Wizard docs, in docstrings, or even on the web in blog posts,
+Dataclass Mage could always use more documentation, whether as part of the
+official Dataclass Mage docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
 Submit Feedback
@@ -111,7 +111,7 @@ Tips
 
 To run a subset of tests::
 
-$ pytest tests/unit/test_dataclass_wizard.py::test_my_func
+$ pytest tests/unit/test_dataclass_mage.py::test_my_func
 
 
 Deploying

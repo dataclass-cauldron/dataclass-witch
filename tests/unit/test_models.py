@@ -1,14 +1,14 @@
 import pytest
 from pytest_mock import MockerFixture
 
-from dataclass_wizard import fromlist
-from dataclass_wizard.models import Container, json_field
+from dataclass_mage import fromlist
+from dataclass_mage.models import Container, json_field
 from .conftest import SampleClass
 
 
 @pytest.fixture
 def mock_open(mocker: MockerFixture):
-    return mocker.patch("dataclass_wizard.models.open")
+    return mocker.patch("dataclass_mage.models.open")
 
 
 def test_json_field_does_not_allow_both_default_and_default_factory():

@@ -343,7 +343,7 @@ class Container(List[T]):
 
     Usage:
 
-        >>> from dataclass_wizard import Container, fromlist
+        >>> from dataclass_mage import Container, fromlist
         >>> from dataclasses import make_dataclass
         >>>
         >>> A = make_dataclass('A', [('f1', str), ('f2', int)])

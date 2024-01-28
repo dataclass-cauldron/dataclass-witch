@@ -2,8 +2,8 @@ from typing import Literal, ClassVar, Generic, Union, List, Tuple, Dict, Callabl
 
 import pytest
 
-from dataclass_wizard.type_def import T
-from dataclass_wizard.utils.typing_compat import get_origin, get_args
+from dataclass_mage.type_def import T
+from dataclass_mage.utils.typing_compat import get_origin, get_args
 from ...conftest import *
 
 

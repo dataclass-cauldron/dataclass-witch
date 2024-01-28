@@ -13,7 +13,7 @@ The following example has been tested on **Python 3.7+**
 
     from dataclasses import dataclass, field
 
-    from dataclass_wizard import JSONWizard
+    from dataclass_mage import JSONWizard
 
 
     @dataclass
@@ -58,7 +58,7 @@ A (More) Complete Example
     # Note: for Python 3.9+, you can import the following from `typing` instead
     from typing_extensions import Literal
 
-    from dataclass_wizard import JSONSerializable
+    from dataclass_mage import JSONSerializable
 
 
     @dataclass

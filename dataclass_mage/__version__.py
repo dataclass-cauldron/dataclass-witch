@@ -1,8 +1,8 @@
 """
-Dataclass Wizard - a set of wizarding tools for interacting with `dataclasses`
+Dataclass Mage - a set of wizarding tools for interacting with `dataclasses`
 """
 
-__title__ = "dataclass-wizard"
+__title__ = ""
 __description__ = (
     "Marshal dataclasses to/from JSON. Use field properties "
     "with initial values. Construct a dataclass schema with "

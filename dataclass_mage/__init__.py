@@ -1,5 +1,5 @@
 """
-Dataclass Wizard
+Dataclass Mage
 ~~~~~~~~~~~~~~~~
 
 Marshal dataclasses to/from JSON and Python dict objects. Support properties
@@ -11,7 +11,7 @@ Sample Usage:
     >>> from datetime import datetime
     >>> from typing import Optional, List
     >>>
-    >>> from dataclass_wizard import JSONSerializable, property_wizard
+    >>> from dataclass_mage import JSONSerializable, property_wizard
     >>>
     >>>
     >>> @dataclass
@@ -116,7 +116,7 @@ from .wizard_mixins import JSONListWizard, JSONFileWizard, YAMLWizard
 
 # Set up logging to ``/dev/null`` like a library is supposed to.
 # http://docs.python.org/3.3/howto/logging.html#configuring-logging-for-a-library
-logging.getLogger("dataclass_wizard").addHandler(logging.NullHandler())
+logging.getLogger("dataclass_mage").addHandler(logging.NullHandler())
 
 # A handy alias in case it comes in useful to anyone :)
 JSONWizard = JSONSerializable

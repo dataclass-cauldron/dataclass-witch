@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Dataclass Wizard'
+project = 'Dataclass Mage'
 copyright = '2024, Steven Hogue'
 author = 'Steven Hogue'
 

@@ -8,13 +8,13 @@ Installation
 Stable release
 --------------
 
-To install Dataclass Wizard, run this command in your terminal:
+To install Dataclass Mage, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install dataclass-wizard
+    $ pip install dataclass-mage
 
-This is the preferred method to install Dataclass Wizard, as it will always install the most recent stable release.
+This is the preferred method to install Dataclass Mage, as it will always install the most recent stable release.
 
 If you don't have `pip`_ installed, this `Python installation guide`_ can guide
 you through the process.
@@ -25,7 +25,7 @@ you through the process.
 From sources
 ------------
 
-The sources for Dataclass Wizard can be downloaded from the `Github repo`_.
+The sources for Dataclass Mage can be downloaded from the `Github repo`_.
 
 You can either clone the public repository:
 

@@ -2,7 +2,7 @@
 Quickstart
 ==========
 
-Here are the supported features that Dataclass Wizard currently provides:
+Here are the supported features that Dataclass Mage currently provides:
 
 -  *JSON (de)serialization*: marshal dataclasses to/from JSON and Python
    ``dict`` objects.
@@ -19,7 +19,7 @@ and declare and use field properties with default values.
     from datetime import datetime
     from typing import Optional, List
 
-    from dataclass_wizard import JSONSerializable, property_wizard
+    from dataclass_mage import JSONSerializable, property_wizard
 
 
     @dataclass

@@ -3,7 +3,7 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "dataclass-wizard"
+name = "dataclass-mage"
 version = "0.24.1"
 license = { text = "Apache 2.0" }
 authors = [{ name = "Steven Hogue" }]
@@ -44,7 +44,7 @@ timedelta = ["pytimeparse>=1.1.7"]
 yaml = ["PyYAML>=5.3"]
 
 [project.scripts]
-wiz = "dataclass_wizard.wizard_cli.cli:main"
+wiz = "dataclass_mage.wizard_cli.cli:main"
 
 [tool.bumpversion]
 current_version = "0.24.1"
@@ -54,7 +54,7 @@ search = "{current_version}"
 replace = "{new_version}"
 
 [[tool.bumpversion.files]]
-filename = "dataclass_wizard/__version__.py"
+filename = "dataclass_mage/__version__.py"
 search = '__version__ = "{current_version}"'
 replace = '__version__ = "{new_version}"'
 

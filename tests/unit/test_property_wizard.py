@@ -6,7 +6,7 @@ from typing import Union, List, ClassVar, DefaultDict, Set
 
 import pytest
 
-from dataclass_wizard import property_wizard
+from dataclass_mage import property_wizard
 from ..conftest import Literal, Annotated, PY39_OR_ABOVE, PY310_OR_ABOVE
 
 log = logging.getLogger(__name__)

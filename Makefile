@@ -52,23 +52,23 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr .pytest_cache
 
 lint: ## format and check style with ruff
-	ruff format dataclass_wizard tests
-	ruff check dataclass_wizard tests
+	ruff format dataclass_mage tests
+	ruff check dataclass_mage tests
 
 test: ## run unit tests quickly with the default Python
-	pytest -v --cov=dataclass_wizard --cov-report=term-missing tests/unit
+	pytest -v --cov=dataclass_mage --cov-report=term-missing tests/unit
 
 test-all: ## run tests on every Python version with tox
 	tox
 
 coverage: ## check code coverage with unit tests quickly with the default Python
-	pytest --cov=dataclass_wizard --cov-report html:htmlcov --cov-branch
+	pytest --cov=dataclass_mage --cov-report html:htmlcov --cov-branch
 	$(BROWSER) htmlcov/index.html
 
 docs: ## generate Sphinx HTML documentation, including API docs
-	rm -f docs/dataclass_wizard.rst
+	rm -f docs/dataclass_mage.rst
 	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/ dataclass_wizard
+	sphinx-apidoc -o docs/ dataclass_mage
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
 	$(BROWSER) docs/_build/html/index.html

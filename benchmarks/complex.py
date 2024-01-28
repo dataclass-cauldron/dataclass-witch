@@ -11,10 +11,10 @@ import pytest
 from dataclasses_json import DataClassJsonMixin, config
 from jsons import JsonSerializable
 
-from dataclass_wizard import JSONWizard
-from dataclass_wizard.class_helper import create_new_class
-from dataclass_wizard.utils.string_conv import to_snake_case
-from dataclass_wizard.utils.type_conv import as_datetime
+from dataclass_mage import JSONWizard
+from dataclass_mage.class_helper import create_new_class
+from dataclass_mage.utils.string_conv import to_snake_case
+from dataclass_mage.utils.type_conv import as_datetime
 
 
 log = logging.getLogger(__name__)
@@ -85,7 +85,7 @@ class PersonDJ:
     hobbies: Dict[str, List[str]] = field(default_factory=lambda: defaultdict(list))
 
 
-# Model for `dataclass-wizard`
+# Model for ``
 WizType = TypeVar("WizType", MyClass, JSONWizard)
 # Model for `jsons`
 JsonsType = TypeVar("JsonsType", MyClass, JsonSerializable)
@@ -152,7 +152,7 @@ def test_load(data, n):
 
     # Result: 1.753
     log.info(
-        "dataclass-wizard     %f",
+        "     %f",
         timeit("MyClassWizard.from_dict(data)", globals=g, number=n),
     )
 
@@ -208,7 +208,7 @@ def test_dump(data, n):
     g.update(locals())
 
     # Result: 2.445
-    log.info("dataclass-wizard     %f", timeit("c1.to_dict()", globals=g, number=n))
+    log.info("     %f", timeit("c1.to_dict()", globals=g, number=n))
 
     # actually, `dataclasses.asdict` call seems to fail for some reason
     # (possibly due to a `defaultdict` being used? would be a bug if so :o)
