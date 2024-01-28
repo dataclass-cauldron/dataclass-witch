@@ -37,7 +37,7 @@ readme = { file = "README.rst", content-type = "text/x-rst" }
 
 [project.urls]
 Documentation = "https://dataclass-wizard.readthedocs.io"
-Source = "https://github.com/rnag/dataclass-wizard"
+Source = "https://github.com/Frequency0/dataclass-wizard"
 
 [project.optional-dependencies]
 timedelta = ["pytimeparse>=1.1.7"]

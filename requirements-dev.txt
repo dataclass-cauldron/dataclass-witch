@@ -4,7 +4,7 @@ wheel==0.37.1
 watchdog[watchmedo]==2.1.6
 ruff==0.1.14
 tox==3.24.5
-Sphinx==4.4.0
+sphinx==7.2.6
 twine==3.8.0
 # Extras
 pytimeparse==1.1.8

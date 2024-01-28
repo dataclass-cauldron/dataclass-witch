@@ -15,7 +15,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/rnag/dataclass-wizard/issues.
+Report bugs at https://github.com/Frequency0/dataclass-wizard/issues.
 
 If you are reporting a bug, please include:
 
@@ -45,7 +45,7 @@ articles, and such.
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/rnag/dataclass-wizard/issues.
+The best way to send feedback is to file an issue at https://github.com/Frequency0/dataclass-wizard/issues.
 
 If you are proposing a feature:
 
@@ -64,7 +64,7 @@ Ready to contribute? Here's how to set up `dataclass-wizard` for local developme
 
     $ git clone git@github.com:your_name_here/dataclass-wizard.git
 
-3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
+3. Install your local copy into a virtualenv. This is how you set up your fork for local development::
 
     $ mkvirtualenv dataclass-wizard
     $ cd dataclass-wizard/
@@ -103,7 +103,7 @@ Before you submit a pull request, check that it meets these guidelines:
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
 3. The pull request should work for Python 3.9 and 3.10, and for PyPy. Check
-   https://github.com/rnag/dataclass-wizard/actions/workflows/dev.yml
+   https://github.com/Frequency0/dataclass-wizard/actions/workflows/dev.yml
    and make sure that the tests pass for all supported Python versions.
 
 Tips
@@ -133,10 +133,10 @@ A reminder for the maintainers on how to deploy.
 Make sure all your changes are committed (including an entry in HISTORY.rst).
 Then run::
 
-$ bumpversion patch # possible: major / minor / patch
-$ git push && git push --tags
+$ bump-my-version bump # possible: major / minor / patch
+$ git push
 
 GitHub Actions will then `deploy to PyPI`_ if tests pass.
 
-.. _`deploy to PyPI`: https://github.com/rnag/dataclass-wizard/actions/workflows/release.yml
+.. _`deploy to PyPI`: https://github.com/Frequency0/dataclass-wizard/actions/workflows/release.yml
 .. _`this post`: https://stackoverflow.com/questions/3745135/push-git-commits-tags-simultaneously

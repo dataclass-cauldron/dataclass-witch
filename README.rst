@@ -13,8 +13,8 @@ Full documentation is available at `Read The Docs`_. (`Installation`_)
 .. image:: https://img.shields.io/pypi/pyversions/dataclass-wizard.svg
         :target: https://pypi.org/project/dataclass-wizard
 
-.. image:: https://github.com/rnag/dataclass-wizard/actions/workflows/dev.yml/badge.svg
-        :target: https://github.com/rnag/dataclass-wizard/actions/workflows/dev.yml
+.. image:: https://github.com/Frequency0/dataclass-wizard/actions/workflows/dev.yml/badge.svg
+        :target: https://github.com/Frequency0/dataclass-wizard/actions/workflows/dev.yml
 
 .. image:: https://readthedocs.org/projects/dataclass-wizard/badge/?version=latest
         :target: https://dataclass-wizard.readthedocs.io/en/latest/?version=latest
@@ -906,7 +906,7 @@ This package was created with Cookiecutter_ and the `rnag/cookiecutter-pypackage
 .. _Cookiecutter: https://github.com/cookiecutter/cookiecutter
 .. _`rnag/cookiecutter-pypackage`: https://github.com/rnag/cookiecutter-pypackage
 .. _`Contributing`: https://dataclass-wizard.readthedocs.io/en/latest/contributing.html
-.. _`open an issue`: https://github.com/rnag/dataclass-wizard/issues
+.. _`open an issue`: https://github.com/Frequency0/dataclass-wizard/issues
 .. _`JSONListWizard`: https://dataclass-wizard.readthedocs.io/en/latest/common_use_cases/wizard_mixins.html#jsonlistwizard
 .. _`JSONFileWizard`: https://dataclass-wizard.readthedocs.io/en/latest/common_use_cases/wizard_mixins.html#jsonfilewizard
 .. _`YAMLWizard`: https://dataclass-wizard.readthedocs.io/en/latest/common_use_cases/wizard_mixins.html#yamlwizard
@@ -925,4 +925,4 @@ This package was created with Cookiecutter_ and the `rnag/cookiecutter-pypackage
 .. _`Patterned Date and Time`: https://dataclass-wizard.readthedocs.io/en/latest/common_use_cases/patterned_date_time.html
 .. _Union: https://docs.python.org/3/library/typing.html#typing.Union
 .. _`Dataclasses in Union Types`: https://dataclass-wizard.readthedocs.io/en/latest/common_use_cases/dataclasses_in_union_types.html
-.. _as milestones: https://github.com/rnag/dataclass-wizard/milestones
+.. _as milestones: https://github.com/Frequency0/dataclass-wizard/milestones
