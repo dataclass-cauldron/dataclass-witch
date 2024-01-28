@@ -48,3 +48,15 @@ wiz = "dataclass_wizard.wizard_cli.cli:main"
 
 [tool.pytest.ini_options]
 collect_ignore = ['setup.py']
+
+[tool.bumpversion]
+current_version = "0.23.0"
+commit = true
+message = "Bump version: {current_version} → {new_version}"
+search = "{current_version}"
+replace = "{new_version}"
+
+[[tool.bumpversion.files]]
+filename = "dataclass_wizard/__version__.py"
+search = '__version__ = "{current_version}"'
+replace = '__version__ = "{new_version}"'
