@@ -12,6 +12,14 @@ dataclass\_wizard.utils.dict\_helper module
    :undoc-members:
    :show-inheritance:
 
+dataclass\_wizard.utils.lazy\_loader module
+-------------------------------------------
+
+.. automodule:: dataclass_wizard.utils.lazy_loader
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 dataclass\_wizard.utils.string\_conv module
 -------------------------------------------
 
@@ -20,18 +28,26 @@ dataclass\_wizard.utils.string\_conv module
    :undoc-members:
    :show-inheritance:
 
-dataclass\_wizard.utils.type\_check module
-------------------------------------------
-
-.. automodule:: dataclass_wizard.utils.type_check
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 dataclass\_wizard.utils.type\_conv module
 -----------------------------------------
 
 .. automodule:: dataclass_wizard.utils.type_conv
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dataclass\_wizard.utils.typing\_compat module
+---------------------------------------------
+
+.. automodule:: dataclass_wizard.utils.typing_compat
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dataclass\_wizard.utils.wrappers module
+---------------------------------------
+
+.. automodule:: dataclass_wizard.utils.wrappers
    :members:
    :undoc-members:
    :show-inheritance:
