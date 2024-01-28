@@ -21,15 +21,18 @@ class B:
 
 
 @dataclass
-class C: ...
+class C:
+    ...
 
 
 @dataclass
-class D: ...
+class D:
+    ...
 
 
 @dataclass
-class DummyClass: ...
+class DummyClass:
+    ...
 
 
 @pytest.mark.parametrize(
@@ -212,16 +215,18 @@ def test_dataclasses_in_union_types():
     # Fix so the forward reference works
     globals().update(locals())
 
-    c = Container.from_dict({
-        "my_data": {
-            "myStr": "string",
-            "MyList": [
-                {"__tag__": "_D_", "my_field": 1.23},
-                {"__tag__": "_C_", "my_field": 3.21},
-            ],
-        },
-        "my_dict": {"key": {"__tag__": "AA", "val": "123"}},
-    })
+    c = Container.from_dict(
+        {
+            "my_data": {
+                "myStr": "string",
+                "MyList": [
+                    {"__tag__": "_D_", "my_field": 1.23},
+                    {"__tag__": "_C_", "my_field": 3.21},
+                ],
+            },
+            "my_dict": {"key": {"__tag__": "AA", "val": "123"}},
+        }
+    )
 
     expected_obj = Container(
         my_data=Data(my_str="string", my_list=[D(my_field=1.23), C(my_field=3)]),
@@ -280,7 +285,8 @@ def test_dataclasses_in_union_types_with_auto_assign_tags():
         my_field: float
 
     @dataclass
-    class E: ...
+    class E:
+        ...
 
     # This is to coverage a case where we have a Meta config for a class,
     # but we do not define a tag in the Meta config.
@@ -294,17 +300,19 @@ def test_dataclasses_in_union_types_with_auto_assign_tags():
     # Fix so the forward reference works
     globals().update(locals())
 
-    c = Container.from_dict({
-        "my_data": {
-            "myStr": "string",
-            "MyList": [
-                {"type": "D", "my_field": 1.23},
-                {"type": "C", "my_field": 3.21},
-                {"type": "!E"},
-            ],
-        },
-        "my_dict": {"key": {"type": "A", "val": "123"}},
-    })
+    c = Container.from_dict(
+        {
+            "my_data": {
+                "myStr": "string",
+                "MyList": [
+                    {"type": "D", "my_field": 1.23},
+                    {"type": "C", "my_field": 3.21},
+                    {"type": "!E"},
+                ],
+            },
+            "my_dict": {"key": {"type": "A", "val": "123"}},
+        }
+    )
 
     expected_obj = Container(
         my_data=Data(my_str="string", my_list=[D(my_field=1.23), C(my_field=3), E()]),

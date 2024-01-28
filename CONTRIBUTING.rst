@@ -76,14 +76,14 @@ Ready to contribute? Here's how to set up `dataclass-wizard` for local developme
 
    Now you can make your changes locally.
 
-5. When you're done making changes, check that your changes pass flake8 and the
-   tests, including testing other Python versions with tox::
+5. When you're done making changes, check that your changes pass ruff
+   and tests, including testing other Python versions with tox::
 
     $ make lint
     $ make test
     $ tox
 
-   To get flake8 and tox, just pip install them into your virtualenv.
+   To get ruff and tox, just pip install them into your virtualenv.
 
 6. Commit your changes and push your branch to GitHub::
 
@@ -133,7 +133,7 @@ A reminder for the maintainers on how to deploy.
 Make sure all your changes are committed (including an entry in HISTORY.rst).
 Then run::
 
-$ bump2version patch # possible: major / minor / patch
+$ bumpversion patch # possible: major / minor / patch
 $ git push && git push --tags
 
 GitHub Actions will then `deploy to PyPI`_ if tests pass.

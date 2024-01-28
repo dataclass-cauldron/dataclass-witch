@@ -103,11 +103,13 @@ class AbstractMeta(metaclass=ABCOrAndMeta):
     # A list of class attributes that are exclusive to the Meta config.
     # When merging two Meta configs for a class, these are the only
     # attributes which will *not* be merged.
-    __special_attrs__ = frozenset({
-        "recursive",
-        "json_key_to_field",
-        "tag",
-    })
+    __special_attrs__ = frozenset(
+        {
+            "recursive",
+            "json_key_to_field",
+            "tag",
+        }
+    )
 
     # Class attribute which enables us to detect a `JSONWizard.Meta` subclass.
     __is_inner_meta__ = False

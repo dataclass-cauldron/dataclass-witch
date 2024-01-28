@@ -579,7 +579,8 @@ class TypeContainer(List[TypeContainerElements]):
 
         return "\n".join(lines)
 
-    def __str__(self): ...
+    def __str__(self):
+        ...
 
     def _default_str(self):
         """
@@ -878,7 +879,8 @@ class PyDataclassGenerator(metaclass=property_wizard):
 
         return class_parts
 
-    def __str__(self): ...
+    def __str__(self):
+        ...
 
     def _default_str(self):
         return f"'{self.name}'"
@@ -1051,7 +1053,8 @@ class PyListGenerator(metaclass=property_wizard):
 
         return lines
 
-    def __str__(self): ...
+    def __str__(self):
+        ...
 
     def _default_str(self):
         if len(self.parsed_types) == 0:

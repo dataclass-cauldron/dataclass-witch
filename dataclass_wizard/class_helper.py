@@ -38,9 +38,9 @@ _FIELD_NAME_TO_LOAD_PARSER: Dict[Type, "DictWithLowerStore[str, AbstractParser]"
 _IS_DUMP_CONFIG_SETUP: Dict[Type, bool] = {}
 
 # A cached mapping, per dataclass, of JSON field to instance field name
-_JSON_FIELD_TO_DATACLASS_FIELD: Dict[Type, Dict[str, Union[str, ExplicitNullType]]] = (
-    defaultdict(dict)
-)
+_JSON_FIELD_TO_DATACLASS_FIELD: Dict[
+    Type, Dict[str, Union[str, ExplicitNullType]]
+] = defaultdict(dict)
 
 # A cached mapping, per dataclass, of instance field name to JSON field
 _DATACLASS_FIELD_TO_JSON_FIELD: Dict[Type, Dict[str, str]] = defaultdict(dict)

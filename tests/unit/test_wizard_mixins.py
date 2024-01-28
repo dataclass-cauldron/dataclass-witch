@@ -9,10 +9,12 @@ from dataclass_wizard.wizard_mixins import JSONListWizard, JSONFileWizard, YAMLW
 from .conftest import SampleClass
 
 
-class MyListWizard(SampleClass, JSONListWizard): ...
+class MyListWizard(SampleClass, JSONListWizard):
+    ...
 
 
-class MyFileWizard(SampleClass, JSONFileWizard): ...
+class MyFileWizard(SampleClass, JSONFileWizard):
+    ...
 
 
 @dataclass
@@ -123,10 +125,12 @@ def test_yaml_wizard_list_to_json():
         my_str: str
         my_dict: Dict[int, str]
 
-    yaml_string = MyClass.list_to_yaml([
-        MyClass("42", {111: "hello", 222: "world"}),
-        MyClass("testing!", {333: "this is a test."}),
-    ])
+    yaml_string = MyClass.list_to_yaml(
+        [
+            MyClass("42", {111: "hello", 222: "world"}),
+            MyClass("testing!", {333: "this is a test."}),
+        ]
+    )
 
     assert (
         yaml_string
@@ -149,7 +153,8 @@ def test_yaml_wizard_for_branch_coverage(mocker: MockerFixture):
 
     # This is to coverage the `if` condition in the `__init_subclass__`
     @dataclass
-    class MyClass(YAMLWizard, key_transform=None): ...
+    class MyClass(YAMLWizard, key_transform=None):
+        ...
 
     # from_yaml: To cover the case of passing in `decoder`
     mock_return_val = {"my_str": "test string"}

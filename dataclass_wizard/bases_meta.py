@@ -184,7 +184,7 @@ def LoadMeta(
     raise_on_unknown_json_key: bool = False,
     json_key_to_field: Dict[str, str] = None,
     key_transform: Union[LetterCase, str] = None,
-    tag: str = None
+    tag: str = None,
 ) -> M:
     """
     Helper function to setup the ``Meta`` Config for the JSON load
@@ -227,7 +227,7 @@ def DumpMeta(
     marshal_date_time_as: Union[DateTimeTo, str] = None,
     key_transform: Union[LetterCase, str] = None,
     tag: str = None,
-    skip_defaults: bool = False
+    skip_defaults: bool = False,
 ) -> M:
     """
     Helper function to setup the ``Meta`` Config for the JSON dump

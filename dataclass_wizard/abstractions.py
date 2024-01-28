@@ -103,7 +103,7 @@ class AbstractJSONWizard(ABC):
         instances: List[W],
         encoder: Encoder = json.dumps,
         indent=None,
-        **encoder_kwargs
+        **encoder_kwargs,
     ) -> AnyStr:
         """
         Converts a ``list`` of dataclass instances to a JSON `string`

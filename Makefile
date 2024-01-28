@@ -51,10 +51,9 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr htmlcov/
 	rm -fr .pytest_cache
 
-lint: ## format using black and check style with flake8 and pylint
-	black --preview dataclass_wizard tests
-	flake8 dataclass_wizard tests
-	pylint dataclass_wizard tests
+lint: ## format and check style with ruff
+	ruff format dataclass_wizard tests
+	ruff check dataclass_wizard tests
 
 test: ## run unit tests quickly with the default Python
 	pytest -v --cov=dataclass_wizard --cov-report=term-missing tests/unit
