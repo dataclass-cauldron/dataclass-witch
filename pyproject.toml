@@ -62,3 +62,11 @@ replace = '__version__ = "{new_version}"'
 filename = "pyproject.toml"
 search = 'version = "{current_version}"'
 replace = 'version = "{new_version}"'
+
+[tool.ruff.lint]
+ignore = [
+    "F722", # F722 for Syntax errors in custom DateTime formats
+    "F821", # F821 for undefined type definitions
+    "F841", # F841 for __class__ closure
+
+]

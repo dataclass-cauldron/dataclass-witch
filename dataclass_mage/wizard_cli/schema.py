@@ -47,8 +47,6 @@ See the end of this file for the original BSD-style license from this library.
 
 """
 
-__all__ = ["PyCodeGenerator"]
-
 import json
 import re
 import textwrap
@@ -267,7 +265,7 @@ class English:
             if match:
                 groups = match.groups()
                 for k in range(0, len(groups)):
-                    if groups[k] == None:
+                    if groups[k] is None:
                         rules[rule][1] = rules[rule][1].replace("\\" + str(k + 1), "")
 
                 return re.sub(rules[rule][0], rules[rule][1], word)

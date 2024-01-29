@@ -4,7 +4,6 @@ import pytest
 
 from dataclass_mage.type_def import T
 from dataclass_mage.utils.typing_compat import get_origin, get_args
-from ...conftest import *
 
 
 @pytest.mark.parametrize(

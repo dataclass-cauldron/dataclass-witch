@@ -1,7 +1,7 @@
 import logging
 from dataclasses import dataclass, field
 from datetime import datetime, date
-from typing import Optional, List, Type
+from typing import Optional, List
 from unittest.mock import ANY
 
 import pytest

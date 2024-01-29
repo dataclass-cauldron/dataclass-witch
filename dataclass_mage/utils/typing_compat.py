@@ -1,28 +1,12 @@
 """
 Utility module for checking generic types provided by the `typing` library.
 """
-
-__all__ = [
-    "is_literal",
-    "get_origin",
-    "get_args",
-    "get_keys_for_typed_dict",
-    "get_named_tuple_field_types",
-    "is_typed_dict",
-    "is_generic",
-    "is_base_generic",
-    "is_annotated",
-    "eval_forward_ref",
-    "eval_forward_ref_if_needed",
-]
-
 import sys
 import types
 import typing
-from collections.abc import Callable
 
 from .string_conv import repl_or_with_union
-from ..constants import PY310_OR_ABOVE, PY39
+from ..constants import PY310_OR_ABOVE
 from ..type_def import FREF, PyLiteral, PyTypedDicts, PyForwardRef
 
 

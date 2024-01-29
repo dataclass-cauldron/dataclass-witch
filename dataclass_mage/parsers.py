@@ -1,21 +1,3 @@
-__all__ = [
-    "IdentityParser",
-    "SingleArgParser",
-    "Parser",
-    "PatternedDTParser",
-    "LiteralParser",
-    "UnionParser",
-    "OptionalParser",
-    "IterableParser",
-    "TupleParser",
-    "VariadicTupleParser",
-    "NamedTupleParser",
-    "NamedTupleUntypedParser",
-    "MappingParser",
-    "DefaultDictParser",
-    "TypedDictParser",
-]
-
 from dataclasses import dataclass, InitVar, is_dataclass
 from typing import Type, Any, Optional, Tuple, Dict, Iterable, Callable, List
 
