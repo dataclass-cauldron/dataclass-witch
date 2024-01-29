@@ -200,7 +200,7 @@ def LoadMeta(
         >>> LoadMeta(key_transform='CAMEL').bind_to(MyClass)
         >>> fromdict(MyClass, {"myStr": "value"})
 
-    .. _Docs: https://dataclass-wizard.readthedocs.io/en/latest/common_use_cases/meta.html
+    .. _Docs: https://dataclass-mage.readthedocs.io/en/latest/common_use_cases/meta.html
     """
 
     # Set meta attributes here.
@@ -243,7 +243,7 @@ def DumpMeta(
         >>> DumpMeta(key_transform='CAMEL').bind_to(MyClass)
         >>> asdict(MyClass, {"myStr": "value"})
 
-    .. _Docs: https://dataclass-wizard.readthedocs.io/en/latest/common_use_cases/meta.html
+    .. _Docs: https://dataclass-mage.readthedocs.io/en/latest/common_use_cases/meta.html
     """
 
     # Set meta attributes here.

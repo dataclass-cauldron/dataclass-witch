@@ -4,7 +4,7 @@ Overview
 Requirements
 ~~~~~~~~~~~~
 
-The ``dataclass-wizard`` library officially supports **Python 3.9+**
+The ``dataclass-mage`` library officially supports **Python 3.9+**
 
 There are no core requirements outside of the Python standard library.
 
@@ -35,7 +35,7 @@ Advantages
 .. _fromisoformat(): https://docs.python.org/3/library/datetime.html#datetime.date.fromisoformat
 .. _defaultdict: https://docs.python.org/3/library/collections.html#collections.defaultdict
 .. _jsons: https://pypi.org/project/jsons/
-.. _`wiz-cli`: https://dataclass-wizard.readthedocs.io/en/latest/wiz_cli.html
+.. _`wiz-cli`: https://dataclass-mage.readthedocs.io/en/latest/wiz_cli.html
 .. _dataclasses-json: https://pypi.org/project/dataclasses-json/
 
 Supported Types
@@ -142,7 +142,7 @@ Special Cases
   so we check the type explicitly. If the value is a string, we first ensure it's in
   a numeric form like '1.23', and if so convert it to a *float* value in seconds;
   otherwise, we convert values like '01:45' or '3hr12m56s' via the `pytimeparse`_
-  module, which is also available as an extra via ``pip install dataclass-wizard[timedelta]``.
+  module, which is also available as an extra via ``pip install dataclass-mage[timedelta]``.
   Lastly, any numeric values are assumed to be in seconds and are used as is.
 
   All :class:`timedelta` values are serialized back to JSON using the builtin :meth:`str` method,
@@ -155,5 +155,5 @@ Special Cases
   from JSON objects using the annotated base type, and serialized back as
   plain ``dict`` objects.
 
-.. _using dataclasses: https://dataclass-wizard.readthedocs.io/en/latest/common_use_cases/dataclasses_in_union_types.html
+.. _using dataclasses: https://dataclass-mage.readthedocs.io/en/latest/common_use_cases/dataclasses_in_union_types.html
 .. _pytimeparse: https://pypi.org/project/pytimeparse/

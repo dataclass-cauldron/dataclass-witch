@@ -62,7 +62,7 @@ Sample Usage:
     >>> #   {"myStr": "string", "listOfInt": [], "myDt": "2010-12-10T15:55:30Z"}
 
 For full documentation and more advanced usage, please see
-<https://dataclass-wizard.readthedocs.io>.
+<https://dataclass-mage.readthedocs.io>.
 
 :copyright: (c) 2021 by Ritvik Nag.
 :license: Apache 2.0, see LICENSE for more details.

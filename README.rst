@@ -4,17 +4,17 @@ Dataclass Mage
 
 Full documentation is available at `Read The Docs`_. (`Installation`_)
 
-.. image:: https://img.shields.io/pypi/v/dataclass-wizard.svg
-        :target: https://pypi.org/project/dataclass-wizard
+.. image:: https://img.shields.io/pypi/v/dataclass-mage.svg
+        :target: https://pypi.org/project/dataclass-mage
 
-.. image:: https://img.shields.io/pypi/pyversions/dataclass-wizard.svg
-        :target: https://pypi.org/project/dataclass-wizard
+.. image:: https://img.shields.io/pypi/pyversions/dataclass-mage.svg
+        :target: https://pypi.org/project/dataclass-mage
 
-.. image:: https://github.com/Frequency0/dataclass-wizard/actions/workflows/dev.yml/badge.svg
-        :target: https://github.com/Frequency0/dataclass-wizard/actions/workflows/dev.yml
+.. image:: https://github.com/Frequency0/dataclass-mage/actions/workflows/dev.yml/badge.svg
+        :target: https://github.com/Frequency0/dataclass-mage/actions/workflows/dev.yml
 
-.. image:: https://readthedocs.org/projects/dataclass-wizard/badge/?version=latest
-        :target: https://dataclass-wizard.readthedocs.io/en/latest/?version=latest
+.. image:: https://readthedocs.org/projects/dataclass-mage/badge/?version=latest
+        :target: https://dataclass-mage.readthedocs.io/en/latest/?version=latest
         :alt: Documentation Status
 
 This library provides a set of simple, yet elegant *wizarding* tools for
@@ -70,12 +70,12 @@ The Dataclass Mage library is available `on PyPI`_, and can be installed with ``
 
     $ pip install dataclass-mage
 
-The ``dataclass-wizard`` library officially supports **Python 3.9** or higher.
+The ``dataclass-mage`` library officially supports **Python 3.9** or higher.
 
 Features
 --------
 
-Here are the supported features that ``dataclass-wizard`` currently provides:
+Here are the supported features that ``dataclass-mage`` currently provides:
 
 -  *JSON/YAML (de)serialization*: marshal dataclasses to/from JSON, YAML, and Python
    ``dict`` objects.
@@ -328,7 +328,7 @@ debugging purposes. Whenever you invoke ``print(obj)`` or ``str(obj)``, for
 example, it'll call this method which will format the dataclass object as
 a prettified JSON string. If you prefer a ``__str__`` method to not be
 added, you can pass in ``str=False`` when extending from the Mixin class
-as mentioned `here <https://dataclass-wizard.readthedocs.io/en/latest/common_use_cases/skip_the_str.html>`_.
+as mentioned `here <https://dataclass-mage.readthedocs.io/en/latest/common_use_cases/skip_the_str.html>`_.
 
 Note that the ``__repr__`` method, which is implemented by the
 ``dataclass`` decorator, is also available. To invoke the Python object
@@ -653,7 +653,7 @@ A brief example of the intended usage is shown below:
 Dataclasses in ``Union`` Types
 ------------------------------
 
-The ``dataclass-wizard`` library fully supports declaring dataclass models in
+The ``dataclass-mage`` library fully supports declaring dataclass models in
 `Union`_ types as field annotations, such as ``list[Wizard | Archer | Barbarian]``.
 
 As of *v0.19.0*, there is added support to  *auto-generate* tags for a dataclass model
@@ -848,7 +848,7 @@ Field Properties
 The Python ``dataclasses`` library has some `key limitations`_
 with how it currently handles properties and default values.
 
-The ``dataclass-wizard`` package natively provides support for using
+The ``dataclass-mage`` package natively provides support for using
 field properties with default values in dataclasses. The main use case
 here is to assign an initial value to the field property, if one is not
 explicitly passed in via the constructor method.
@@ -881,29 +881,29 @@ Credits
 
 This package was created with Cookiecutter_ and the `rnag/cookiecutter-pypackage`_ project template.
 
-.. _Read The Docs: https://dataclass-wizard.readthedocs.io
-.. _Installation: https://dataclass-wizard.readthedocs.io/en/latest/installation.html
-.. _on PyPI: https://pypi.org/project/dataclass-wizard/
+.. _Read The Docs: https://dataclass-mage.readthedocs.io
+.. _Installation: https://dataclass-mage.readthedocs.io/en/latest/installation.html
+.. _on PyPI: https://pypi.org/project/dataclass-mage/
 .. _Cookiecutter: https://github.com/cookiecutter/cookiecutter
 .. _`rnag/cookiecutter-pypackage`: https://github.com/rnag/cookiecutter-pypackage
-.. _`Contributing`: https://dataclass-wizard.readthedocs.io/en/latest/contributing.html
-.. _`open an issue`: https://github.com/Frequency0/dataclass-wizard/issues
-.. _`JSONListWizard`: https://dataclass-wizard.readthedocs.io/en/latest/common_use_cases/wizard_mixins.html#jsonlistwizard
-.. _`JSONFileWizard`: https://dataclass-wizard.readthedocs.io/en/latest/common_use_cases/wizard_mixins.html#jsonfilewizard
-.. _`YAMLWizard`: https://dataclass-wizard.readthedocs.io/en/latest/common_use_cases/wizard_mixins.html#yamlwizard
-.. _`Container`: https://dataclass-wizard.readthedocs.io/en/latest/dataclass_mage.html#dataclass_mage.Container
-.. _`Supported Types`: https://dataclass-wizard.readthedocs.io/en/latest/overview.html#supported-types
+.. _`Contributing`: https://dataclass-mage.readthedocs.io/en/latest/contributing.html
+.. _`open an issue`: https://github.com/Frequency0/dataclass-mage/issues
+.. _`JSONListWizard`: https://dataclass-mage.readthedocs.io/en/latest/common_use_cases/wizard_mixins.html#jsonlistwizard
+.. _`JSONFileWizard`: https://dataclass-mage.readthedocs.io/en/latest/common_use_cases/wizard_mixins.html#jsonfilewizard
+.. _`YAMLWizard`: https://dataclass-mage.readthedocs.io/en/latest/common_use_cases/wizard_mixins.html#yamlwizard
+.. _`Container`: https://dataclass-mage.readthedocs.io/en/latest/dataclass_mage.html#dataclass_mage.Container
+.. _`Supported Types`: https://dataclass-mage.readthedocs.io/en/latest/overview.html#supported-types
 .. _`Mixin`: https://stackoverflow.com/a/547714/10237506
-.. _`Meta`: https://dataclass-wizard.readthedocs.io/en/latest/common_use_cases/meta.html
+.. _`Meta`: https://dataclass-mage.readthedocs.io/en/latest/common_use_cases/meta.html
 .. _`pydantic`: https://pydantic-docs.helpmanual.io/
-.. _`Using Field Properties`: https://dataclass-wizard.readthedocs.io/en/latest/using_field_properties.html
-.. _`field properties`: https://dataclass-wizard.readthedocs.io/en/latest/using_field_properties.html
-.. _`custom mapping`: https://dataclass-wizard.readthedocs.io/en/latest/common_use_cases/custom_key_mappings.html
-.. _`wiz-cli`: https://dataclass-wizard.readthedocs.io/en/latest/wiz_cli.html
+.. _`Using Field Properties`: https://dataclass-mage.readthedocs.io/en/latest/using_field_properties.html
+.. _`field properties`: https://dataclass-mage.readthedocs.io/en/latest/using_field_properties.html
+.. _`custom mapping`: https://dataclass-mage.readthedocs.io/en/latest/common_use_cases/custom_key_mappings.html
+.. _`wiz-cli`: https://dataclass-mage.readthedocs.io/en/latest/wiz_cli.html
 .. _`key limitations`: https://florimond.dev/en/posts/2018/10/reconciling-dataclasses-and-properties-in-python/
-.. _`more complete example`: https://dataclass-wizard.readthedocs.io/en/latest/examples.html#a-more-complete-example
+.. _`more complete example`: https://dataclass-mage.readthedocs.io/en/latest/examples.html#a-more-complete-example
 .. _custom format: https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes
-.. _`Patterned Date and Time`: https://dataclass-wizard.readthedocs.io/en/latest/common_use_cases/patterned_date_time.html
+.. _`Patterned Date and Time`: https://dataclass-mage.readthedocs.io/en/latest/common_use_cases/patterned_date_time.html
 .. _Union: https://docs.python.org/3/library/typing.html#typing.Union
-.. _`Dataclasses in Union Types`: https://dataclass-wizard.readthedocs.io/en/latest/common_use_cases/dataclasses_in_union_types.html
-.. _as milestones: https://github.com/Frequency0/dataclass-wizard/milestones
+.. _`Dataclasses in Union Types`: https://dataclass-mage.readthedocs.io/en/latest/common_use_cases/dataclasses_in_union_types.html
+.. _as milestones: https://github.com/Frequency0/dataclass-mage/milestones

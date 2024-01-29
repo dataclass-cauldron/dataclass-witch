@@ -8,7 +8,7 @@ __description__ = (
     "with initial values. Construct a dataclass schema with "
     "JSON input."
 )
-__url__ = "https://github.com/Frequency0/dataclass-wizard"
+__url__ = "https://github.com/Frequency0/dataclass-mage"
 __version__ = "0.24.1"
 __author__ = "Steven Hogue"
 __author_email__ = ""
