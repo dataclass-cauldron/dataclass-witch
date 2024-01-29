@@ -49,6 +49,7 @@ wiz = "dataclass_mage.wizard_cli.cli:main"
 [tool.bumpversion]
 current_version = "0.25.0"
 commit = true
+tag = true
 message = "Bump version: {current_version} → {new_version}"
 search = "{current_version}"
 replace = "{new_version}"
