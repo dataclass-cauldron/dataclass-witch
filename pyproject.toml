@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dataclass-mage"
-version = "0.24.1"
+version = "0.25.0"
 license = { text = "Apache 2.0" }
 authors = [{ name = "Steven Hogue" }]
 keywords = [
@@ -47,7 +47,7 @@ yaml = ["PyYAML>=5.3"]
 wiz = "dataclass_mage.wizard_cli.cli:main"
 
 [tool.bumpversion]
-current_version = "0.24.1"
+current_version = "0.25.0"
 commit = true
 message = "Bump version: {current_version} → {new_version}"
 search = "{current_version}"
@@ -62,3 +62,11 @@ replace = '__version__ = "{new_version}"'
 filename = "pyproject.toml"
 search = 'version = "{current_version}"'
 replace = 'version = "{new_version}"'
+
+[tool.ruff.lint]
+ignore = [
+    "F722", # F722 for Syntax errors in custom DateTime formats
+    "F821", # F821 for undefined type definitions
+    "F841", # F841 for __class__ closure
+
+]

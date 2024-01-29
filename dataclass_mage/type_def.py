@@ -36,6 +36,11 @@ __all__ = [
 from collections import deque
 from datetime import date, time, datetime
 from enum import Enum
+from typing import ForwardRef as PyForwardRef
+from typing import Literal as PyLiteral
+from typing import Protocol as PyProtocol
+from typing import TypedDict as PyTypedDict
+from typing import Deque as PyDeque
 from typing import (
     Any,
     Type,
@@ -54,8 +59,6 @@ from typing import (
     BinaryIO,
 )
 from uuid import UUID
-
-from .decorators import discard_kwargs
 
 
 # Type check for numeric types - needed because `bool` is technically
@@ -123,12 +126,6 @@ ListOfJSONObject = List[JSONObject]
 # Valid value types in JSON.
 JSONValue = Union[None, str, bool, int, float, JSONList, JSONObject]
 
-from typing import ForwardRef as PyForwardRef
-from typing import Literal as PyLiteral
-from typing import Protocol as PyProtocol
-from typing import TypedDict as PyTypedDict
-from typing import Deque as PyDeque
-
 PyTypedDicts.append(PyTypedDict)
 # Python 3.8+ users might import from either `typing` or
 # `typing_extensions`, so check for both types.
@@ -141,8 +138,6 @@ except ImportError:
     pass
 
 PyTypedDicts.append(PyTypedDict)
-
-from typing import ForwardRef as PyForwardRef
 
 
 # Forward references can be either strings or explicit `ForwardRef` objects.

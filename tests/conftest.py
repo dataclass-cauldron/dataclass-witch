@@ -11,6 +11,7 @@ __all__ = [
 
 import sys
 from pathlib import Path
+from contextlib import nullcontext as does_not_raise
 
 
 # Directory for test files
@@ -21,8 +22,6 @@ PY39_OR_ABOVE = sys.version_info[:2] >= (3, 9)
 
 # Check if we are running Python 3.10+
 PY310_OR_ABOVE = sys.version_info[:2] >= (3, 10)
-
-from contextlib import nullcontext as does_not_raise
 
 try:
     from typing import Literal

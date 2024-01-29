@@ -8,11 +8,26 @@ from uuid import UUID
 
 import pytest
 
-from dataclass_mage import *
+from dataclass_mage import (
+    LoadMeta,
+    DumpMeta,
+    asdict,
+    fromdict,
+    JSONWizard,
+    JSONSerializable,
+    json_field,
+    json_key,
+)
 from dataclass_mage.class_helper import get_meta
 from dataclass_mage.constants import TAG
 from dataclass_mage.errors import ParseError
-from ..conftest import *
+from ..conftest import (
+    does_not_raise,
+    Literal,
+    TypedDict,
+    Annotated,
+    Deque,
+)
 
 
 log = logging.getLogger(__name__)

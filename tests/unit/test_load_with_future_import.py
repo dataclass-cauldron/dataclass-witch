@@ -10,7 +10,7 @@ import pytest
 
 from dataclass_mage import JSONWizard, DumpMeta
 from dataclass_mage.errors import ParseError
-from ..conftest import *
+from ..conftest import does_not_raise
 
 log = logging.getLogger(__name__)
 

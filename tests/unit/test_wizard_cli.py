@@ -257,7 +257,7 @@ def test_call_wiz_cli_when_open_raises_error(mocker, mock_stdin, mock_open):
     mock_stdin.name = "<stdin>"
     mock_stdin.read.return_value = valid_json
 
-    with pytest.raises(SystemExit) as e:
+    with pytest.raises(SystemExit) as _:
         main(["gs", "-", "testing"])
 
     mock_open.assert_called_once()

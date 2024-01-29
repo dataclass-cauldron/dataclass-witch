@@ -5,7 +5,12 @@ Re-usable Enum definitions
 
 from enum import Enum
 
-from .utils.string_conv import *
+from .utils.string_conv import (
+    to_camel_case,
+    to_pascal_case,
+    to_lisp_case,
+    to_snake_case,
+)
 from .utils.wrappers import FuncWrapper
 
 

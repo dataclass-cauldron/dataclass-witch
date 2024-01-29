@@ -25,7 +25,20 @@ from typing import (
 
 import pytest
 
-from dataclass_mage import *
+from dataclass_mage import (
+    LoadMeta,
+    asdict,
+    fromdict,
+    JSONWizard,
+    JSONSerializable,
+    json_field,
+    json_key,
+    DatePattern,
+    TimePattern,
+    DateTimePattern,
+    Pattern,
+    LoadMixin,
+)
 from dataclass_mage.constants import TAG
 from dataclass_mage.errors import (
     ParseError,
@@ -42,7 +55,13 @@ from dataclass_mage.parsers import (
 )
 from dataclass_mage.type_def import NoneType, T
 from .conftest import MyUUIDSubclass
-from ..conftest import *
+from ..conftest import (
+    does_not_raise,
+    Literal,
+    TypedDict,
+    Annotated,
+    Deque,
+)
 
 
 log = logging.getLogger(__name__)

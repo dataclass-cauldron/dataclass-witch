@@ -40,7 +40,23 @@ from .decorators import _alias, _single_arg_alias, resolve_alias_func, _identity
 from .errors import ParseError, MissingFields, UnknownJSONKey, MissingData
 from .log import LOG
 from .models import Extras, _PatternedDT
-from .parsers import *
+from .parsers import (
+    IdentityParser,
+    SingleArgParser,
+    Parser,
+    LiteralParser,
+    PatternedDTParser,
+    OptionalParser,
+    UnionParser,
+    IterableParser,
+    TupleParser,
+    VariadicTupleParser,
+    NamedTupleParser,
+    NamedTupleUntypedParser,
+    MappingParser,
+    DefaultDictParser,
+    TypedDictParser,
+)
 from .type_def import (
     ExplicitNull,
     FrozenKeys,
