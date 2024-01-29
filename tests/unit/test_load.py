@@ -1137,6 +1137,7 @@ def test_tuple_without_type_hinting(input, expectation, expected):
             does_not_raise(),
             (0,),
         ),
+        ([], does_not_raise(), tuple()),  # A variadic tuple can be 0 length
         ([True, False, True], pytest.raises(TypeError), None),
         (
             # Raises a `ValueError` because `hello` cannot be converted to int
