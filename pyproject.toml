@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dataclass-mage"
-version = "0.25.0"
+version = "0.25.1"
 license = { text = "Apache 2.0" }
 authors = [{ name = "Steven Hogue" }]
 keywords = [
@@ -47,7 +47,7 @@ yaml = ["PyYAML>=5.3"]
 wiz = "dataclass_mage.wizard_cli.cli:main"
 
 [tool.bumpversion]
-current_version = "0.25.0"
+current_version = "0.25.1"
 commit = true
 tag = true
 message = "Bump version: {current_version} → {new_version}"
