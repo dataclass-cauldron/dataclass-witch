@@ -1,5 +1,6 @@
 import pytest
 
+from dataclass_mage.enums import LetterCase
 from dataclass_mage.utils.string_conv import (
     to_camel_case,
     to_pascal_case,
@@ -107,4 +108,30 @@ def test_to_lisp_case(string, expected):
 )
 def test_to_snake_case(string, expected):
     actual = to_snake_case(string)
+    assert actual == expected
+
+
+@pytest.mark.parametrize(
+    "string,expected",
+    [
+        ("device_type", "device_type"),
+        ("io_error", "io_error"),
+        ("isACamelCasedWORD", "isACamelCasedWORD"),
+        ("ATitledWordToTESTWith", "ATitledWordToTESTWith"),
+        ("not-a-tester", "not-a-tester"),
+        ("device_type", "device_type"),
+        ("helloworld", "helloworld"),
+        ("A", "A"),
+        ("TESTing_if_thisWorks", "TESTing_if_thisWorks"),
+        ("a_B_Cde_fG_hi", "a_B_Cde_fG_hi"),
+        ("ALL_CAPS", "ALL_CAPS"),
+        ("WoRd", "WoRd"),
+        ("HIThereHOWIsItGoinG", "HIThereHOWIsItGoinG"),
+        ("How_-Are-_YoUDoing__TeST", "How_-Are-_YoUDoing__TeST"),
+        ("thisIsWithANumber42ToTEST", "thisIsWithANumber42ToTEST"),
+        ("Number 42 With spaces", "Number 42 With spaces"),
+    ],
+)
+def test_no_conversion(string, expected):
+    actual = LetterCase.NONE(string)
     assert actual == expected
