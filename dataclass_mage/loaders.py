@@ -305,9 +305,6 @@ class LoadMixin(AbstractLoader, BaseLoadHook):
             return PatternedDTParser(base_cls, extras, base_type)
 
         if load_hook is None:
-            # Need to check this first, because the `Literal` type in Python
-            # 3.6 behaves a bit differently (doesn't have an `__origin__`
-            # attribute for example)
             if is_literal(ann_type):
                 return LiteralParser(base_cls, extras, ann_type)
 
