@@ -23,7 +23,7 @@ Getting help::
       -V, --version    Display the version of this tool.
 
 Checking the version of the CLI tool should display the currently installed
-version of the ``dataclass-wizard`` library::
+version of the ``dataclass-mage`` library::
 
     $ wiz -V
 
@@ -189,6 +189,6 @@ and ``Optional`` types.
         key2: str | None
 
 
-.. _`opening an issue`: https://github.com/rnag/dataclass-wizard/issues
+.. _`opening an issue`: https://github.com/Frequency0/dataclass-mage/issues
 .. _`PEP 585`: https://www.python.org/dev/peps/pep-0585/
 .. _`PEP 604`: https://www.python.org/dev/peps/pep-0604/

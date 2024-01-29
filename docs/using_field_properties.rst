@@ -124,7 +124,7 @@ But as I've pointed out, there's only two main issues I had with the solution ab
    especially if I'm adding another field property to the class.
 
 
-The ``dataclass-wizard`` package provides a `metaclass`_ approach which
+The ``dataclass-mage`` package provides a `metaclass`_ approach which
 attempts to resolve this issue with minimal overhead and setup involved.
 
 The metaclass ``property_wizard`` provides support for using field properties
@@ -264,7 +264,7 @@ More Examples
 -------------
 TODO.
 
-For now, please check out the test cases `here <https://github.com/rnag/dataclass-wizard/blob/main/tests/unit/test_property_wizard.py>`_
+For now, please check out the test cases `here <https://github.com/Frequency0/dataclass-mage/blob/main/tests/unit/test_property_wizard.py>`_
 for additional examples.
 
 

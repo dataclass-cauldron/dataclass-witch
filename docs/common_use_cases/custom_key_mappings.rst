@@ -1,7 +1,7 @@
 Map a JSON Key to a Field
 =========================
 
-The ``dataclass-wizard`` library provides a set of built-in *key transform* helper
+The ``dataclass-mage`` library provides a set of built-in *key transform* helper
 functions that automatically transform the casing of keys in a JSON or Python
 ``dict`` object to and from dataclass field names. As mentioned in the
 :doc:`Meta <meta>` section, this key transform only applies to dataclasses
