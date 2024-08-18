@@ -923,3 +923,12 @@ This package was created with Cookiecutter_ and the `rnag/cookiecutter-pypackage
 .. _Union: https://docs.python.org/3/library/typing.html#typing.Union
 .. _`Dataclasses in Union Types`: https://dataclass-witch.readthedocs.io/en/latest/common_use_cases/dataclasses_in_union_types.html
 .. _as milestones: https://github.com/dataclass-cauldron/dataclass-witch/milestones
+
+License
+-------
+
+Copyright (c) 2024 The dataclass-witch authors
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+For a copy of the License, see LICENSE.
