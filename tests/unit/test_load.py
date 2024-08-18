@@ -56,11 +56,14 @@ from dataclass_witch.parsers import (
 from dataclass_witch.type_def import NoneType, T
 from .conftest import MyUUIDSubclass
 from ..conftest import (
+    PY310_OR_BELOW,
     does_not_raise,
     Literal,
     TypedDict,
     Annotated,
     Deque,
+    Required,
+    NotRequired,
 )
 
 
@@ -1371,7 +1374,7 @@ def test_typed_dict(input, expectation, expected):
         ),
     ],
 )
-def test_typed_dict_with_optional_fields(input, expectation, expected):
+def test_typed_dict_with_all_fields_optional(input, expectation, expected):
     """
     Test case for loading to a TypedDict which has `total=False`, indicating
     that all fields are optional.
@@ -1382,6 +1385,144 @@ def test_typed_dict_with_optional_fields(input, expectation, expected):
         my_str: str
         my_bool: bool
         my_int: int
+
+    @dataclass
+    class MyClass(JSONSerializable):
+        my_typed_dict: MyDict
+
+    d = {"myTypedDict": input}
+
+    with expectation:
+        result = MyClass.from_dict(d)
+
+        log.debug("Parsed object: %r", result)
+        assert result.my_typed_dict == expected
+
+
+@pytest.mark.skipif(
+    PY310_OR_BELOW,
+    reason=""" \
+        Support for `Required` and `NotRequired` requires Python 3.11 or
+        higher to work reliably.
+
+        Users who still want to use `Required` and `NotRequired` on older
+        Python versions (using the `typing_extensions` library) in a way
+        that works with dataclass-witch will have to use the `TypedDict`
+        version from `typing_extensions`, not from the standard library.
+
+        The source code of the `typing_extension` package explains why:
+
+        > The standard library TypedDict below Python 3.11 does not
+        > store runtime information about optional and required keys
+        > when using Required or NotRequired. [1]
+
+        [1]: https://github.com/python/typing_extensions/blob/e1250ff869e7ee5ad05170d8a4b65469f13801c3/src/typing_extensions.py#L879-L880
+    """,
+)
+@pytest.mark.parametrize(
+    "input,expectation,expected",
+    [
+        ({}, pytest.raises(ParseError), None),
+        ({"key": "value"}, pytest.raises(ParseError), {}),
+        (
+            {"my_str": "test", "my_int": 2, "my_bool": True, "other_key": "testing"},
+            does_not_raise(),
+            {"my_str": "test", "my_int": 2, "my_bool": True},
+        ),
+        ({"my_str": 3}, pytest.raises(ParseError), None),
+        (
+            {"my_str": "test", "my_int": "test", "my_bool": True},
+            pytest.raises(ValueError),
+            None,
+        ),
+        (
+            {"my_str": "test", "my_int": 2, "my_bool": True},
+            does_not_raise(),
+            {"my_str": "test", "my_int": 2, "my_bool": True},
+        ),
+        (
+            {"my_str": "test", "my_bool": True},
+            does_not_raise(),
+            {"my_str": "test", "my_bool": True},
+        ),
+        (
+            # Incorrect type - `list`, but should be a `dict`
+            [{"my_str": "test", "my_int": 2, "my_bool": True}],
+            pytest.raises(ParseError),
+            None,
+        ),
+    ],
+)
+def test_typed_dict_with_one_field_not_required(input, expectation, expected):
+    """
+    Test case for loading to a TypedDict whose fields are all mandatory
+    except for one field, whose annotated type is NotRequired.
+
+    """
+
+    class MyDict(TypedDict):
+        my_str: str
+        my_bool: bool
+        my_int: NotRequired[int]
+
+    @dataclass
+    class MyClass(JSONSerializable):
+        my_typed_dict: MyDict
+
+    d = {"myTypedDict": input}
+
+    with expectation:
+        result = MyClass.from_dict(d)
+
+        log.debug("Parsed object: %r", result)
+        assert result.my_typed_dict == expected
+
+
+@pytest.mark.skipif(
+    PY310_OR_BELOW,
+    reason=""" \
+        Support for `Required` and `NotRequired` requires Python 3.11 or
+        higher to work reliably.
+        See `test_typed_dict_with_one_field_not_required` for details on
+        why this is the case.
+    """,
+)
+@pytest.mark.parametrize(
+    "input,expectation,expected",
+    [
+        ({}, pytest.raises(ParseError), None),
+        ({"my_int": 2}, does_not_raise(), {"my_int": 2}),
+        ({"key": "value"}, pytest.raises(ParseError), None),
+        ({"key": "value", "my_int": 2}, does_not_raise(), {"my_int": 2}),
+        (
+            {"my_str": "test", "my_int": 2, "my_bool": True, "other_key": "testing"},
+            does_not_raise(),
+            {"my_str": "test", "my_int": 2, "my_bool": True},
+        ),
+        ({"my_str": 3}, pytest.raises(ParseError), None),
+        (
+            {"my_str": "test", "my_int": "test", "my_bool": True},
+            pytest.raises(ValueError),
+            {"my_str": "test", "my_int": "test", "my_bool": True},
+        ),
+        (
+            {"my_str": "test", "my_int": 2, "my_bool": True},
+            does_not_raise(),
+            {"my_str": "test", "my_int": 2, "my_bool": True},
+        ),
+    ],
+)
+def test_typed_dict_with_one_field_required(input, expectation, expected):
+    """
+    Test case for loading to a TypedDict whose fields are all optional
+    except for one field, whose annotated type is Required.
+
+    """
+
+    class MyDict(TypedDict, total=False):
+        my_str: str
+        my_bool: bool
+        my_int: Required[int]
 
     @dataclass
     class MyClass(JSONSerializable):

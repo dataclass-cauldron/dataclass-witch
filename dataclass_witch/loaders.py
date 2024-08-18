@@ -63,6 +63,8 @@ from .type_def import (
     DefFactory,
     NoneType,
     JSONObject,
+    PyRequired,
+    PyNotRequired,
     M,
     N,
     T,
@@ -408,6 +410,11 @@ class LoadMixin(AbstractLoader, BaseLoadHook):
                         return UnionParser(
                             base_cls, extras, base_types, cls.get_parser_for_annotation
                         )
+
+                elif base_type in (PyRequired, PyNotRequired):
+                    # Given `Required[T]` or `NotRequired[T]`, we only need `T`
+                    ann_type = get_args(ann_type)[0]
+                    return cls.get_parser_for_annotation(ann_type, base_cls, extras)
 
                 elif issubclass(base_type, defaultdict):
                     load_hook = hooks[defaultdict]
