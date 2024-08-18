@@ -7,12 +7,12 @@ from unittest.mock import ANY
 import pytest
 from pytest_mock import MockerFixture
 
-from dataclass_mage import JSONWizard
-from dataclass_mage.bases import M
-from dataclass_mage.bases_meta import BaseJSONWizardMeta
-from dataclass_mage.enums import LetterCase, DateTimeTo
-from dataclass_mage.errors import ParseError
-from dataclass_mage.utils.type_conv import date_to_timestamp
+from dataclass_witch import JSONWizard
+from dataclass_witch.bases import M
+from dataclass_witch.bases_meta import BaseJSONWizardMeta
+from dataclass_witch.enums import LetterCase, DateTimeTo
+from dataclass_witch.errors import ParseError
+from dataclass_witch.utils.type_conv import date_to_timestamp
 
 
 log = logging.getLogger(__name__)
@@ -20,22 +20,22 @@ log = logging.getLogger(__name__)
 
 @pytest.fixture
 def mock_log(mocker: MockerFixture):
-    return mocker.patch("dataclass_mage.bases_meta.LOG")
+    return mocker.patch("dataclass_witch.bases_meta.LOG")
 
 
 @pytest.fixture
 def mock_meta_initializers(mocker: MockerFixture):
-    return mocker.patch("dataclass_mage.bases_meta._META_INITIALIZER")
+    return mocker.patch("dataclass_witch.bases_meta._META_INITIALIZER")
 
 
 @pytest.fixture
 def mock_bind_to(mocker: MockerFixture):
-    return mocker.patch("dataclass_mage.bases_meta.BaseJSONWizardMeta.bind_to")
+    return mocker.patch("dataclass_witch.bases_meta.BaseJSONWizardMeta.bind_to")
 
 
 @pytest.fixture
 def mock_get_dumper(mocker: MockerFixture):
-    return mocker.patch("dataclass_mage.bases_meta.get_dumper")
+    return mocker.patch("dataclass_witch.bases_meta.get_dumper")
 
 
 def test_merge_meta_with_or():

@@ -6,14 +6,16 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Dataclass Mage'
-copyright = '2024, Steven Hogue'
-author = 'Steven Hogue'
+project = 'Dataclass Witch'
+copyright = '2024 The dataclass-witch authors'
+author = 'The dataclass-witch authors'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = [
+    'sphinx.ext.autodoc',
+]
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']

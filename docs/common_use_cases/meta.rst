@@ -25,8 +25,8 @@ does not matter, but for demo purposes it's named the same as the base class her
     from dataclasses import dataclass
     from datetime import date
 
-    from dataclass_mage import JSONSerializable
-    from dataclass_mage.enums import DateTimeTo, LetterCase
+    from dataclass_witch import JSONSerializable
+    from dataclass_witch.enums import DateTimeTo, LetterCase
 
     # Sets up logging, so that library logs are visible in the console.
     logging.basicConfig(level='INFO')
@@ -173,7 +173,7 @@ Here's a quick example to confirm this behavior:
     from dataclasses import dataclass
     from datetime import date
 
-    from dataclass_mage import JSONWizard
+    from dataclass_witch import JSONWizard
 
     # Sets up logging, so that library logs are visible in the console.
     logging.basicConfig(level='INFO')
@@ -253,7 +253,7 @@ as shown in the example below.
 
    This may also have unforeseen consequences - for example, if your application
    depends on another library that uses the ``JSONWizard`` Mixin class from the
-   Dataclass Mage library, then that library will be likewise affected by any
+   Dataclass Witch library, then that library will be likewise affected by any
    global ``Meta`` values that are set.
 
 .. code:: python3
@@ -262,8 +262,8 @@ as shown in the example below.
     from dataclasses import dataclass
     from datetime import date
 
-    from dataclass_mage import JSONWizard
-    from dataclass_mage.enums import DateTimeTo
+    from dataclass_witch import JSONWizard
+    from dataclass_witch.enums import DateTimeTo
 
 
     # Sets up logging, so that library logs are visible in the console.

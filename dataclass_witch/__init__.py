@@ -1,6 +1,6 @@
 """
-Dataclass Mage
-~~~~~~~~~~~~~~~~
+Dataclass Witch
+~~~~~~~~~~~~~~~
 
 Marshal dataclasses to/from JSON and Python dict objects. Support properties
 with initial values. Generate a dataclass schema for JSON input.
@@ -11,7 +11,7 @@ Sample Usage:
     >>> from datetime import datetime
     >>> from typing import Optional, List
     >>>
-    >>> from dataclass_mage import JSONSerializable, property_wizard
+    >>> from dataclass_witch import JSONSerializable, property_wizard
     >>>
     >>>
     >>> @dataclass
@@ -62,7 +62,7 @@ Sample Usage:
     >>> #   {"myStr": "string", "listOfInt": [], "myDt": "2010-12-10T15:55:30Z"}
 
 For full documentation and more advanced usage, please see
-<https://dataclass-mage.readthedocs.io>.
+<https://dataclass-witch.readthedocs.io>.
 
 :copyright: (c) 2021 by Ritvik Nag.
 :license: Apache 2.0, see LICENSE for more details.
@@ -115,7 +115,7 @@ from .wizard_mixins import JSONListWizard, JSONFileWizard, YAMLWizard
 
 # Set up logging to ``/dev/null`` like a library is supposed to.
 # http://docs.python.org/3.3/howto/logging.html#configuring-logging-for-a-library
-logging.getLogger("dataclass_mage").addHandler(logging.NullHandler())
+logging.getLogger("dataclass_witch").addHandler(logging.NullHandler())
 
 # A handy alias in case it comes in useful to anyone :)
 JSONWizard = JSONSerializable

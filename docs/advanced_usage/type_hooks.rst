@@ -28,8 +28,8 @@ strings, so they are converted to all uppercase when ``to_dict`` or
     from enum import Enum
     from typing import Union, AnyStr, Type
 
-    from dataclass_mage import JSONSerializable, DumpMixin, LoadMixin
-    from dataclass_mage.type_def import N
+    from dataclass_witch import JSONSerializable, DumpMixin, LoadMixin
+    from dataclass_witch.type_def import N
 
 
     @dataclass

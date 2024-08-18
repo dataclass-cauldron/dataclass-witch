@@ -1,7 +1,7 @@
 import pytest
 
-from dataclass_mage.enums import LetterCase
-from dataclass_mage.utils.string_conv import (
+from dataclass_witch.enums import LetterCase
+from dataclass_witch.utils.string_conv import (
     to_camel_case,
     to_pascal_case,
     to_lisp_case,

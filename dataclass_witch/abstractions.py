@@ -403,7 +403,7 @@ class AbstractDumper(ABC):
         and implement this method. A simple example is shown below:
 
         >>> from dataclasses import dataclass
-        >>> from dataclass_mage import JSONSerializable, DumpMixin
+        >>> from dataclass_witch import JSONSerializable, DumpMixin
         >>>
         >>>
         >>> @dataclass

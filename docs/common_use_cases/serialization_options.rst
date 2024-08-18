@@ -23,7 +23,7 @@ approaches is shown below.
     from dataclasses import field, dataclass
     from typing import DefaultDict, List
 
-    from dataclass_mage import JSONWizard
+    from dataclass_witch import JSONWizard
 
 
     @dataclass
@@ -74,7 +74,7 @@ Additionally, here is an example to demonstrate usage of both these approaches:
     from dataclasses import dataclass
     from typing import Annotated
 
-    from dataclass_mage import JSONWizard, json_key, json_field
+    from dataclass_witch import JSONWizard, json_key, json_field
 
 
     @dataclass

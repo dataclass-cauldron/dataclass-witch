@@ -124,7 +124,7 @@ But as I've pointed out, there's only two main issues I had with the solution ab
    especially if I'm adding another field property to the class.
 
 
-The ``dataclass-mage`` package provides a `metaclass`_ approach which
+The ``dataclass-witch`` package provides a `metaclass`_ approach which
 attempts to resolve this issue with minimal overhead and setup involved.
 
 The metaclass ``property_wizard`` provides support for using field properties
@@ -141,7 +141,7 @@ the ``property_wizard`` metaclass:
     from dataclasses import dataclass, field
     from typing import Union
 
-    from dataclass_mage import property_wizard
+    from dataclass_witch import property_wizard
 
 
     @dataclass
@@ -198,7 +198,7 @@ module, just so that the code works for Python 3.6+ without issue.
     from typing import Union
     from typing_extensions import Annotated
 
-    from dataclass_mage import property_wizard
+    from dataclass_witch import property_wizard
 
 
     @dataclass
@@ -264,7 +264,7 @@ More Examples
 -------------
 TODO.
 
-For now, please check out the test cases `here <https://github.com/Frequency0/dataclass-mage/blob/main/tests/unit/test_property_wizard.py>`_
+For now, please check out the test cases `here <https://github.com/dataclass-cauldron/dataclass-witch/blob/main/tests/unit/test_property_wizard.py>`_
 for additional examples.
 
 
@@ -297,7 +297,7 @@ types are now set with initial values as expected:
     from typing import Union, List, Set, DefaultDict
     from typing_extensions import Annotated
 
-    from dataclass_mage import property_wizard
+    from dataclass_witch import property_wizard
 
 
     @dataclass

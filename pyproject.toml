@@ -3,10 +3,15 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "dataclass-mage"
+name = "dataclass-witch"
 version = "0.25.1"
 license = { text = "Apache 2.0" }
-authors = [{ name = "Steven Hogue" }]
+authors = [
+    { name = "Ritvik Nag" },
+    { name = "Steven Hogue" },
+    { name = "Claudia Pellegrino" },
+]
+maintainers = [{ name = "Claudia Pellegrino" }]
 keywords = [
     "dataclasses",
     "dataclass",
@@ -19,7 +24,7 @@ keywords = [
     "property",
     "field-property",
     "serialization",
-    "deserialization"
+    "deserialization",
 ]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
@@ -30,21 +35,21 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python"
+    "Programming Language :: Python",
 ]
 description = "Marshal dataclasses to/from JSON. Use field properties with initial values. Construct a dataclass schema with JSON input."
 readme = { file = "README.rst", content-type = "text/x-rst" }
 
 [project.urls]
 Documentation = "https://.readthedocs.io"
-Source = "https://github.com/Frequency0/dataclass-mage"
+Source = "https://github.com/dataclass-cauldron/dataclass-witch"
 
 [project.optional-dependencies]
 timedelta = ["pytimeparse>=1.1.7"]
 yaml = ["PyYAML>=5.3"]
 
 [project.scripts]
-wiz = "dataclass_mage.wizard_cli.cli:main"
+wiz = "dataclass_witch.wizard_cli.cli:main"
 
 [tool.bumpversion]
 current_version = "0.25.1"
@@ -55,7 +60,7 @@ search = "{current_version}"
 replace = "{new_version}"
 
 [[tool.bumpversion.files]]
-filename = "dataclass_mage/__version__.py"
+filename = "dataclass_witch/__version__.py"
 search = '__version__ = "{current_version}"'
 replace = '__version__ = "{new_version}"'
 

@@ -1,1 +1,1 @@
-"""Unit test package for dataclass_mage."""
+"""Unit test package for dataclass_witch."""

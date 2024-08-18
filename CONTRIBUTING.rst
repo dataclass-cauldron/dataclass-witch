@@ -15,7 +15,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/Frequency0/dataclass-mage/issues.
+Report bugs at https://github.com/dataclass-cauldron/dataclass-witch/issues.
 
 If you are reporting a bug, please include:
 
@@ -38,14 +38,14 @@ and "help wanted" is open to whoever wants to implement it.
 Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
-Dataclass Mage could always use more documentation, whether as part of the
-official Dataclass Mage docs, in docstrings, or even on the web in blog posts,
+Dataclass Witch could always use more documentation, whether as part of the
+official Dataclass Witch docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/Frequency0/dataclass-mage/issues.
+The best way to send feedback is to file an issue at https://github.com/dataclass-cauldron/dataclass-witch/issues.
 
 If you are proposing a feature:
 
@@ -57,17 +57,17 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Here's how to set up `` for local development.
+Ready to contribute? Here's how to set up `dataclass-witch` for local development.
 
-1. Fork the `` repo on GitHub.
+1. Fork the `dataclass-witch`_ repo on GitHub.
 2. Clone your fork locally::
 
-    $ git clone git@github.com:your_name_here/.git
+    $ git clone git@github.com:your_name_here/dataclass-witch.git
 
 3. Install your local copy into a virtualenv. This is how you set up your fork for local development::
 
-    $ mkvirtualenv 
-    $ cd /
+    $ python -m venv .venv
+    $ . .venv/bin/activate
     $ make init
 
 4. Create a branch for local development::
@@ -93,6 +93,8 @@ Ready to contribute? Here's how to set up `` for local development.
 
 7. Submit a pull request through the GitHub website.
 
+.. _`dataclass-witch`: https://github.com/dataclass-cauldron/dataclass-witch
+
 Pull Request Guidelines
 -----------------------
 
@@ -103,7 +105,7 @@ Before you submit a pull request, check that it meets these guidelines:
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
 3. The pull request should work for Python 3.9 and 3.10, and for PyPy. Check
-   https://github.com/Frequency0/dataclass-mage/actions/workflows/dev.yml
+   https://github.com/dataclass-cauldron/dataclass-witch/actions/workflows/dev.yml
    and make sure that the tests pass for all supported Python versions.
 
 Tips
@@ -111,7 +113,7 @@ Tips
 
 To run a subset of tests::
 
-$ pytest tests/unit/test_dataclass_mage.py::test_my_func
+$ pytest tests/unit/test_my_file.py::test_my_func
 
 
 Deploying
@@ -138,5 +140,5 @@ $ git push
 
 GitHub Actions will then `deploy to PyPI`_ if tests pass.
 
-.. _`deploy to PyPI`: https://github.com/Frequency0/dataclass-mage/actions/workflows/release.yml
+.. _`deploy to PyPI`: https://github.com/dataclass-cauldron/dataclass-witch/actions/workflows/release.yml
 .. _`this post`: https://stackoverflow.com/questions/3745135/push-git-commits-tags-simultaneously

@@ -836,7 +836,7 @@ class PyDataclassGenerator(metaclass=property_wizard):
     def get_lines(self) -> List[str]:
         if self.is_root:
             ModuleImporter.register_import_by_name(
-                "dataclass_mage", "JSONWizard", level=2
+                "dataclass_witch", "JSONWizard", level=2
             )
             class_name = f"class {self.name}(JSONWizard):"
         else:

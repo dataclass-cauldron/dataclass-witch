@@ -6,7 +6,7 @@ data is *specifically* either a :class:`Class1` or :class:`Class2` instance, the
 de-serialized as expected. However, the good news is that there is a simple enough workaround
 in this scenario.
 
-As of the *v0.14.0* release, the ``dataclass-mage`` supports declaring dataclasses
+As of the *v0.14.0* release, the ``dataclass-witch`` supports declaring dataclasses
 within ``Union`` types. Previously, it did not support dataclasses within ``Union`` types
 at all, which was kind of a glaring omission, and something on my "to-do" list of things
 to (eventually) add support for.
@@ -50,7 +50,7 @@ dataclasses in ``Union`` types.
 
     from dataclasses import dataclass
 
-    from dataclass_mage import JSONWizard
+    from dataclass_witch import JSONWizard
 
 
     @dataclass
@@ -169,7 +169,7 @@ using a class inheritance model with the :class:`JSONWizard` mixin class:
     from dataclasses import dataclass
     from typing import Union
 
-    from dataclass_mage import JSONWizard
+    from dataclass_witch import JSONWizard
 
 
     @dataclass
@@ -268,7 +268,7 @@ using any special class inheritance model:
     from dataclasses import dataclass
     from typing import Union
 
-    from dataclass_mage import asdict, fromdict, LoadMeta
+    from dataclass_witch import asdict, fromdict, LoadMeta
 
 
     @dataclass

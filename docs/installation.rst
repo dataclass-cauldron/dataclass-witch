@@ -8,13 +8,13 @@ Installation
 Stable release
 --------------
 
-To install Dataclass Mage, run this command in your terminal:
+To install Dataclass Witch, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install dataclass-mage
+    $ pip install dataclass-witch
 
-This is the preferred method to install Dataclass Mage, as it will always install the most recent stable release.
+This is the preferred method to install Dataclass Witch, as it will always install the most recent stable release.
 
 If you don't have `pip`_ installed, this `Python installation guide`_ can guide
 you through the process.
@@ -25,19 +25,19 @@ you through the process.
 From sources
 ------------
 
-The sources for Dataclass Mage can be downloaded from the `Github repo`_.
+The sources for Dataclass Witch can be downloaded from the `Github repo`_.
 
 You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/Frequency0/dataclass-mage
+    $ git clone git://github.com/dataclass-cauldron/dataclass-witch
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl -OJL https://github.com/Frequency0/dataclass-mage/tarball/main
+    $ curl -OJL https://github.com/dataclass-cauldron/dataclass-witch/tarball/main
 
 Once you have a copy of the source, you can install it with:
 
@@ -46,5 +46,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/Frequency0/dataclass-mage
-.. _tarball: https://github.com/Frequency0/dataclass-mage/tarball/main
+.. _Github repo: https://github.com/dataclass-cauldron/dataclass-witch
+.. _tarball: https://github.com/dataclass-cauldron/dataclass-witch/tarball/main

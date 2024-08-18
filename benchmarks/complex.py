@@ -11,10 +11,10 @@ import pytest
 from dataclasses_json import DataClassJsonMixin, config
 from jsons import JsonSerializable
 
-from dataclass_mage import JSONWizard
-from dataclass_mage.class_helper import create_new_class
-from dataclass_mage.utils.string_conv import to_snake_case
-from dataclass_mage.utils.type_conv import as_datetime
+from dataclass_witch import JSONWizard
+from dataclass_witch.class_helper import create_new_class
+from dataclass_witch.utils.string_conv import to_snake_case
+from dataclass_witch.utils.type_conv import as_datetime
 
 
 log = logging.getLogger(__name__)

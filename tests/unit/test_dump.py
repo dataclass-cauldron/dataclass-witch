@@ -8,7 +8,7 @@ from uuid import UUID
 
 import pytest
 
-from dataclass_mage import (
+from dataclass_witch import (
     LoadMeta,
     DumpMeta,
     asdict,
@@ -18,9 +18,9 @@ from dataclass_mage import (
     json_field,
     json_key,
 )
-from dataclass_mage.class_helper import get_meta
-from dataclass_mage.constants import TAG
-from dataclass_mage.errors import ParseError
+from dataclass_witch.class_helper import get_meta
+from dataclass_witch.constants import TAG
+from dataclass_witch.errors import ParseError
 from ..conftest import (
     does_not_raise,
     Literal,

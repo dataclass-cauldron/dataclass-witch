@@ -1,4 +1,4 @@
-* Dataclass Mage version:
+* Dataclass Witch version:
 * Python version:
 * Operating System:
 

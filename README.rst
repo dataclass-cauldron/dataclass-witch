@@ -1,20 +1,20 @@
-================
-Dataclass Mage
-================
+===============
+Dataclass Witch
+===============
 
 Full documentation is available at `Read The Docs`_. (`Installation`_)
 
-.. image:: https://img.shields.io/pypi/v/dataclass-mage.svg
-        :target: https://pypi.org/project/dataclass-mage
+.. image:: https://img.shields.io/pypi/v/dataclass-witch.svg
+        :target: https://pypi.org/project/dataclass-witch
 
-.. image:: https://img.shields.io/pypi/pyversions/dataclass-mage.svg
-        :target: https://pypi.org/project/dataclass-mage
+.. image:: https://img.shields.io/pypi/pyversions/dataclass-witch.svg
+        :target: https://pypi.org/project/dataclass-witch
 
-.. image:: https://github.com/Frequency0/dataclass-mage/actions/workflows/dev.yml/badge.svg
-        :target: https://github.com/Frequency0/dataclass-mage/actions/workflows/dev.yml
+.. image:: https://github.com/dataclass-cauldron/dataclass-witch/actions/workflows/dev.yml/badge.svg
+        :target: https://github.com/dataclass-cauldron/dataclass-witch/actions/workflows/dev.yml
 
-.. image:: https://readthedocs.org/projects/dataclass-mage/badge/?version=latest
-        :target: https://dataclass-mage.readthedocs.io/en/latest/?version=latest
+.. image:: https://readthedocs.org/projects/dataclass-witch/badge/?version=latest
+        :target: https://dataclass-witch.readthedocs.io/en/latest/?version=latest
         :alt: Documentation Status
 
 This library provides a set of simple, yet elegant *wizarding* tools for
@@ -25,11 +25,11 @@ interacting with the Python ``dataclasses`` module.
 
 -------------------
 
-**Behold, the power of the Dataclass Mage**::
+**Behold, the power of the Dataclass Witch**::
 
     >>> from __future__ import annotations
     >>> from dataclasses import dataclass, field
-    >>> from dataclass_mage import JSONWizard
+    >>> from dataclass_witch import JSONWizard
     ...
     >>> @dataclass
     ... class MyClass(JSONWizard):
@@ -64,18 +64,25 @@ interacting with the Python ``dataclasses`` module.
 Installation
 ------------
 
-The Dataclass Mage library is available `on PyPI`_, and can be installed with ``pip``:
+.. note::
+   The Dataclass Witch library is not available on PyPI yet.
 
-.. code-block:: shell
+   Once PyPI maintainers have accepted the organization request, the
+   library will be available via PyPI. Until then, follow the instructions
+   under `CONTRIBUTING.rst` to install a copy into your virtual environment.
 
-    $ pip install dataclass-mage
+.. The Dataclass Witch library is available `on PyPI`_, and can be installed with ``pip``:
 
-The ``dataclass-mage`` library officially supports **Python 3.9** or higher.
+.. .. code-block:: shell
+
+..     $ pip install dataclass-witch
+
+The ``dataclass-witch`` library officially supports **Python 3.9** or higher.
 
 Features
 --------
 
-Here are the supported features that ``dataclass-mage`` currently provides:
+Here are the supported features that ``dataclass-witch`` currently provides:
 
 -  *JSON/YAML (de)serialization*: marshal dataclasses to/from JSON, YAML, and Python
    ``dict`` objects.
@@ -98,7 +105,7 @@ In addition to the ``JSONWizard``, here are a few extra Mixin_ classes that migh
 Supported Types
 ---------------
 
-The Dataclass Mage library provides inherent support for standard Python collections
+The Dataclass Witch library provides inherent support for standard Python collections
 such as ``list``, ``dict`` and ``set``, as well as most Generics from the typing
 module, such as ``Union`` and ``Any``. Other commonly used types such as ``Enum``,
 ``defaultdict``, and date and time objects such as ``datetime`` are also natively
@@ -125,7 +132,7 @@ Using the built-in JSON marshalling support for dataclasses:
     from datetime import date
     from enum import Enum
 
-    from dataclass_mage import JSONWizard
+    from dataclass_witch import JSONWizard
 
 
     @dataclass
@@ -204,7 +211,7 @@ Using the built-in JSON marshalling support for dataclasses:
     from dataclasses import dataclass, field
     from typing_extensions import Annotated
 
-    from dataclass_mage import property_wizard
+    from dataclass_witch import property_wizard
 
 
     @dataclass
@@ -260,7 +267,7 @@ Using the built-in JSON marshalling support for dataclasses:
     from datetime import date
     from typing import List, Union
 
-    from dataclass_mage import JSONWizard
+    from dataclass_witch import JSONWizard
 
 
     @dataclass
@@ -328,7 +335,7 @@ debugging purposes. Whenever you invoke ``print(obj)`` or ``str(obj)``, for
 example, it'll call this method which will format the dataclass object as
 a prettified JSON string. If you prefer a ``__str__`` method to not be
 added, you can pass in ``str=False`` when extending from the Mixin class
-as mentioned `here <https://dataclass-mage.readthedocs.io/en/latest/common_use_cases/skip_the_str.html>`_.
+as mentioned `here <https://dataclass-witch.readthedocs.io/en/latest/common_use_cases/skip_the_str.html>`_.
 
 Note that the ``__repr__`` method, which is implemented by the
 ``dataclass`` decorator, is also available. To invoke the Python object
@@ -378,7 +385,7 @@ Here is an example to demonstrate the usage of these helper functions:
     from dataclasses import dataclass, field
     from datetime import datetime, date
 
-    from dataclass_mage import fromdict, asdict, DumpMeta
+    from dataclass_witch import fromdict, asdict, DumpMeta
 
 
     @dataclass
@@ -438,7 +445,7 @@ Example below:
 
     from dataclasses import dataclass
 
-    from dataclass_mage import JSONSerializable, json_field
+    from dataclass_witch import JSONSerializable, json_field
 
 
     @dataclass
@@ -478,8 +485,8 @@ along the way.
     from dataclasses import dataclass
     from datetime import date
 
-    from dataclass_mage import JSONWizard
-    from dataclass_mage.enums import DateTimeTo
+    from dataclass_witch import JSONWizard
+    from dataclass_witch.enums import DateTimeTo
 
 
     @dataclass
@@ -546,8 +553,8 @@ an unknown JSON key is encountered in the  *load* (de-serialization) process.
     import logging
     from dataclasses import dataclass
 
-    from dataclass_mage import JSONWizard
-    from dataclass_mage.errors import UnknownJSONKey
+    from dataclass_witch import JSONWizard
+    from dataclass_witch.errors import UnknownJSONKey
 
 
     # Sets up application logging if we haven't already done so
@@ -618,7 +625,7 @@ A brief example of the intended usage is shown below:
     # Note: in Python 3.9+, you can import this from `typing` instead
     from typing_extensions import Annotated
 
-    from dataclass_mage import fromdict, asdict, DatePattern, TimePattern, Pattern
+    from dataclass_witch import fromdict, asdict, DatePattern, TimePattern, Pattern
 
 
     @dataclass
@@ -653,7 +660,7 @@ A brief example of the intended usage is shown below:
 Dataclasses in ``Union`` Types
 ------------------------------
 
-The ``dataclass-mage`` library fully supports declaring dataclass models in
+The ``dataclass-witch`` library fully supports declaring dataclass models in
 `Union`_ types as field annotations, such as ``list[Wizard | Archer | Barbarian]``.
 
 As of *v0.19.0*, there is added support to  *auto-generate* tags for a dataclass model
@@ -677,7 +684,7 @@ dataclasses in ``Union`` types. For more info, check out the
 
     from dataclasses import dataclass
 
-    from dataclass_mage import JSONWizard
+    from dataclass_witch import JSONWizard
 
 
     @dataclass
@@ -761,7 +768,7 @@ result. An example of both these approaches is shown below.
     from dataclasses import field, dataclass
     from typing import DefaultDict, List
 
-    from dataclass_mage import JSONWizard
+    from dataclass_witch import JSONWizard
 
 
     @dataclass
@@ -812,7 +819,7 @@ Additionally, here is an example to demonstrate usage of both these approaches:
     from dataclasses import dataclass
     from typing import Annotated
 
-    from dataclass_mage import JSONWizard, json_key, json_field
+    from dataclass_witch import JSONWizard, json_key, json_field
 
 
     @dataclass
@@ -848,7 +855,7 @@ Field Properties
 The Python ``dataclasses`` library has some `key limitations`_
 with how it currently handles properties and default values.
 
-The ``dataclass-mage`` package natively provides support for using
+The ``dataclass-witch`` package natively provides support for using
 field properties with default values in dataclasses. The main use case
 here is to assign an initial value to the field property, if one is not
 explicitly passed in via the constructor method.
@@ -870,40 +877,49 @@ to discuss a new feature or change.
 
 Check out the `Contributing`_ section in the docs for more info.
 
-TODOs
------
+Authors and maintainers
+-----------------------
 
-All feature ideas or suggestions for future consideration, have been currently added
-`as milestones`_ in the project's GitHub repo.
+dataclass-witch is currently maintained by `Claudia Pellegrino`_.
+
+dataclass-witch has been forked from a project that was originally
+created by `Ritvik Nag`_ as `dataclass-wizard`_, later forked by
+`Steven Hogue`_ as `dataclass-mage`_.
+
+.. _Claudia Pellegrino: https://github.com/claui/
+.. _dataclass-mage: https://pypi.org/project/dataclass-mage/
+.. _dataclass-wizard: https://pypi.org/project/dataclass-wizard/
+.. _Ritvik Nag: https://github.com/rnag
+.. _Steven Hogue: https://github.com/Frequency0
 
 Credits
 -------
 
 This package was created with Cookiecutter_ and the `rnag/cookiecutter-pypackage`_ project template.
 
-.. _Read The Docs: https://dataclass-mage.readthedocs.io
-.. _Installation: https://dataclass-mage.readthedocs.io/en/latest/installation.html
-.. _on PyPI: https://pypi.org/project/dataclass-mage/
+.. _Read The Docs: https://dataclass-witch.readthedocs.io
+.. _Installation: https://dataclass-witch.readthedocs.io/en/latest/installation.html
+.. _on PyPI: https://pypi.org/project/dataclass-witch/
 .. _Cookiecutter: https://github.com/cookiecutter/cookiecutter
 .. _`rnag/cookiecutter-pypackage`: https://github.com/rnag/cookiecutter-pypackage
-.. _`Contributing`: https://dataclass-mage.readthedocs.io/en/latest/contributing.html
-.. _`open an issue`: https://github.com/Frequency0/dataclass-mage/issues
-.. _`JSONListWizard`: https://dataclass-mage.readthedocs.io/en/latest/common_use_cases/wizard_mixins.html#jsonlistwizard
-.. _`JSONFileWizard`: https://dataclass-mage.readthedocs.io/en/latest/common_use_cases/wizard_mixins.html#jsonfilewizard
-.. _`YAMLWizard`: https://dataclass-mage.readthedocs.io/en/latest/common_use_cases/wizard_mixins.html#yamlwizard
-.. _`Container`: https://dataclass-mage.readthedocs.io/en/latest/dataclass_mage.html#dataclass_mage.Container
-.. _`Supported Types`: https://dataclass-mage.readthedocs.io/en/latest/overview.html#supported-types
+.. _`Contributing`: https://dataclass-witch.readthedocs.io/en/latest/contributing.html
+.. _`open an issue`: https://github.com/dataclass-cauldron/dataclass-witch/issues
+.. _`JSONListWizard`: https://dataclass-witch.readthedocs.io/en/latest/common_use_cases/wizard_mixins.html#jsonlistwizard
+.. _`JSONFileWizard`: https://dataclass-witch.readthedocs.io/en/latest/common_use_cases/wizard_mixins.html#jsonfilewizard
+.. _`YAMLWizard`: https://dataclass-witch.readthedocs.io/en/latest/common_use_cases/wizard_mixins.html#yamlwizard
+.. _`Container`: https://dataclass-witch.readthedocs.io/en/latest/dataclass_witch.html#dataclass_witch.Container
+.. _`Supported Types`: https://dataclass-witch.readthedocs.io/en/latest/overview.html#supported-types
 .. _`Mixin`: https://stackoverflow.com/a/547714/10237506
-.. _`Meta`: https://dataclass-mage.readthedocs.io/en/latest/common_use_cases/meta.html
+.. _`Meta`: https://dataclass-witch.readthedocs.io/en/latest/common_use_cases/meta.html
 .. _`pydantic`: https://pydantic-docs.helpmanual.io/
-.. _`Using Field Properties`: https://dataclass-mage.readthedocs.io/en/latest/using_field_properties.html
-.. _`field properties`: https://dataclass-mage.readthedocs.io/en/latest/using_field_properties.html
-.. _`custom mapping`: https://dataclass-mage.readthedocs.io/en/latest/common_use_cases/custom_key_mappings.html
-.. _`wiz-cli`: https://dataclass-mage.readthedocs.io/en/latest/wiz_cli.html
+.. _`Using Field Properties`: https://dataclass-witch.readthedocs.io/en/latest/using_field_properties.html
+.. _`field properties`: https://dataclass-witch.readthedocs.io/en/latest/using_field_properties.html
+.. _`custom mapping`: https://dataclass-witch.readthedocs.io/en/latest/common_use_cases/custom_key_mappings.html
+.. _`wiz-cli`: https://dataclass-witch.readthedocs.io/en/latest/wiz_cli.html
 .. _`key limitations`: https://florimond.dev/en/posts/2018/10/reconciling-dataclasses-and-properties-in-python/
-.. _`more complete example`: https://dataclass-mage.readthedocs.io/en/latest/examples.html#a-more-complete-example
+.. _`more complete example`: https://dataclass-witch.readthedocs.io/en/latest/examples.html#a-more-complete-example
 .. _custom format: https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes
-.. _`Patterned Date and Time`: https://dataclass-mage.readthedocs.io/en/latest/common_use_cases/patterned_date_time.html
+.. _`Patterned Date and Time`: https://dataclass-witch.readthedocs.io/en/latest/common_use_cases/patterned_date_time.html
 .. _Union: https://docs.python.org/3/library/typing.html#typing.Union
-.. _`Dataclasses in Union Types`: https://dataclass-mage.readthedocs.io/en/latest/common_use_cases/dataclasses_in_union_types.html
-.. _as milestones: https://github.com/Frequency0/dataclass-mage/milestones
+.. _`Dataclasses in Union Types`: https://dataclass-witch.readthedocs.io/en/latest/common_use_cases/dataclasses_in_union_types.html
+.. _as milestones: https://github.com/dataclass-cauldron/dataclass-witch/milestones

@@ -1,7 +1,7 @@
-dataclass_mage
-==============
+dataclass_witch
+===============
 
 .. toctree::
    :maxdepth: 4
 
-   dataclass_mage
+   dataclass_witch
