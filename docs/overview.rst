@@ -106,7 +106,8 @@ Special Cases
 
 * ``bool`` - JSON values that appear as strings or integers will be de-serialized
   to a ``bool`` using a case-insensitive search that matches against the following
-  "truthy" values:
+  "truthy" values::
+
       *TRUE, T, YES, Y, 1*
 
 * ``Enum`` - JSON values (ideally strings) are de-serialized to ``Enum``

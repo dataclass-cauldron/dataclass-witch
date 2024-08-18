@@ -20,8 +20,11 @@ A few important notes on the behavior of JSON parsing:
     * Nested lists within the above structure (e.g. list -> dict -> list)
       should similarly merge all list elements with the list for that same key
       in each sibling `dict` object. For example, assuming the below input::
+
         ... [{"d1": [1, {"k": "v"}]}, {"d1": [{"k": 2}, {"k2": "v2"}, True]}]
+
       This should result in a single, merged type definition for "d1"::
+
         ... List[Union[int, dataclass(k: Union[str, int], k2: str), bool]]
 
     * Any nested dictionaries within lists will have their Model class name
@@ -895,7 +898,7 @@ class PyDataclassGenerator(metaclass=property_wizard):
 
 @dataclass(repr=False)
 class PyListGenerator(metaclass=property_wizard):
-    """
+    r"""
     Parse a list in a JSON object to a Python list, based on the following
     rules:
 
@@ -905,7 +908,7 @@ class PyListGenerator(metaclass=property_wizard):
       `Union[int, str, bool]`.
 
     * If the JSON list contains *any* complex type, like a dict, then
-      all `dict`s should have their keys and values merged together.
+      all `dict`\s should have their keys and values merged together.
       Optional and Union should be included if needed.
 
       Additionally, if `is_root` is true, then calling ``str()`` will

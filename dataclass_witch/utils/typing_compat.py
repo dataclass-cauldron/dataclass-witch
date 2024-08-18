@@ -186,6 +186,7 @@ def get_args(cls):
 
     For unions, basic simplifications used by Union constructor are performed.
     Examples::
+
         get_args(Dict[str, int]) == (str, int)
         get_args(int) == ()
         get_args(Union[int, Union[T, int], str][int]) == (int, str)

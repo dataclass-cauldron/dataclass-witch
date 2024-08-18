@@ -17,7 +17,6 @@
    examples
    wiz_cli
    using_field_properties
-   python_compatibility
    common_use_cases/index
    advanced_usage/index
    modules

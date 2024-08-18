@@ -202,23 +202,23 @@ def asdict(
     """Return the fields of a dataclass instance as a new dictionary mapping
     field names to field values.
 
-    Example usage:
+    Example usage::
 
-      @dataclass
-      class C:
-          x: int
-          y: int
+        @dataclass
+        class C:
+            x: int
+            y: int
 
-      c = C(1, 2)
-      assert asdict(c) == {'x': 1, 'y': 2}
+        c = C(1, 2)
+        assert asdict(c) == {'x': 1, 'y': 2}
 
     When directly invoking this function, an optional Meta configuration for
     the dataclass can be specified via ``DumpMeta``; by default, this will
     apply recursively to any nested dataclasses. Here's a sample usage of this
     below::
 
-        >>> DumpMeta(key_transform='CAMEL').bind_to(MyClass)
-        >>> asdict(MyClass(my_str="value"))
+        DumpMeta(key_transform='CAMEL').bind_to(MyClass)
+        asdict(MyClass(my_str="value"))
 
     If given, 'dict_factory' will be used instead of built-in dict.
     The function applies recursively to field values that are
