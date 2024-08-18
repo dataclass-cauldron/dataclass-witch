@@ -5,6 +5,8 @@ __all__ = [
     "PyDeque",
     "PyTypedDict",
     "PyTypedDicts",
+    "PyRequired",
+    "PyNotRequired",
     "FrozenKeys",
     "DefFactory",
     "NoneType",
@@ -139,6 +141,17 @@ except ImportError:
 
 PyTypedDicts.append(PyTypedDict)
 
+# Python 3.11 introduced `Required` and `NotRequired` wrappers for
+# `TypedDict` fields (PEP 655). Users of earlier Python versions may
+# import them from `typing_extensions`. However, they then need to
+# use `TypedDict` from `typing_extensions`, not from the standard
+# library.
+try:
+    from typing import Required as PyRequired
+    from typing import NotRequired as PyNotRequired
+except ImportError:
+    from typing_extensions import Required as PyRequired
+    from typing_extensions import NotRequired as PyNotRequired
 
 # Forward references can be either strings or explicit `ForwardRef` objects.
 # noinspection SpellCheckingInspection

@@ -1,6 +1,7 @@
 """
 Utility module for checking generic types provided by the `typing` library.
 """
+
 import sys
 import types
 import typing
